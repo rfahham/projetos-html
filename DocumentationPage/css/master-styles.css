@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*Box model*/
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+/* My styles*/
+
+body {
+    font: normal 100% 'Source Sans Pro', sans-serif;
+   background-color: #f0f0f0; 
+}
+
+#toggle-menu,
+.menu-on,
+.menu-off {
+    display: none;
+}
+
+nav#navbar {
+    position: fixed;
+    border-right: 1px solid black;
+    height: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+nav#navbar ul {
+    border-top: 1px solid black;
+    margin-top: 1em;
+}
+
+nav#navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+nav#navbar li {
+    border-bottom: 1px solid black;
+    padding: 10px 10px 10px 40px;;
+    text-align: left;
+    font-size: 1.3em;
+}
+
+
+nav#navbar li:hover {
+    background-color: #00ACC1;
+    color: #fff;
+}
+
+header {
+    font-size: 2em;
+   padding: 40px 0 20px 0;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.5;
+} 
+
+#main-doc {
+    margin-left: 300px;
+    font-size: 1rem;
+    width: auto;
+    padding: 0 160px 0 160px;
+}
+
+code {
+    background-color: #DCDCDC;
+    white-space: pre-line;
+    word-break: normal;
+    word-wrap: normal;
+    margin: 20px;
+    display: block;
+    padding: 1em;
+    border-left: 5px solid #00ACC1;
+    border-radius: 5px;
+}
+
+section ol {
+    font-size: 1rem;
+    margin-left: 4em;
+    list-style-type: decimal;
+}
+
+section ol li {
+    margin: 0.5em;
+    font-size: 1.2em;
+}
+
+section ul {
+    font-size: 1rem;
+    margin-left: 4em;
+    list-style-type: circle;
+}
+
+section ul li {
+    margin: 0.5em;
+    font-size: 1.2em;
+}
+
+span.distinct {
+    background-color: #dcdcdc;
+    border-radius: 5%;
+}
+
+span.red-span {
+    color: #DD4A68;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0),
+     rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0));
+}
+
+/* Media queries */
+
+@media (max-width: 1200px) {
+    #main-doc {
+    padding: 0 60px 0 60px;
+
+    }
+}
+
+@media (max-width: 800px) {
+
+    .menu-on {
+        display:block;
+        background-color: #00ACC1;
+        color: #fff;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        font-size: 2em;
+        padding: 20px;
+        z-index: 1001;
+    }
+
+    .menu-off {
+        background-color: #00ACC1;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        font-size: 2em;
+        padding: 20px;
+        z-index: 1000;
+        display: none;
+    }
+
+    .fa-times {
+        padding-left: 300px;
+    }
+  
+    #toggle-menu:checked ~ nav#navbar {
+        display: block;
+    }
+
+    #toggle-menu:checked ~ .menu-off {
+        display: block;
+    }
+
+    #toggle-menu:checked ~ .menu-on {
+        display: none;
+    }
+
+    nav#navbar {
+        background-color: #dcdcdc;
+        z-index: 1002;
+        display: none;
+    }
+
+    #main-doc {
+        margin: 0;
+        padding: 20px;
+        position: relative;
+        width: 100%;
+    }
+
+    section ol {
+        margin: 0;
+    }
+}
+
+@media (max-width: 400px) {
+        nav#navbar {
+            width: 250px;
+        }
+
+        .fa-times {
+            padding-left: 250px;
+        }
+    }

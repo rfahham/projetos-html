@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  <title>Clock</title>
+
+</head>
+<body>
+<style type="text/css">
+
+html, body {
+  background: #B993D6;
+  background: linear-gradient(to left, #B993D6 , #8CA6DB);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 2.5em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+  position: relative;
+}
+a:hover:before {
+  clip: rect(0, 190px, 190px, 0);
+}
+a:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: attr(data-content);
+  display: inline-block;
+  color: #fff;
+  width: 100%;
+  clip: rect(0, 0, 190px, 0);
+  -webkit-transition: clip cubic-bezier(0.25, 0.46, 0.45, 0.94) 500ms;
+  transition: clip cubic-bezier(0.25, 0.46, 0.45, 0.94) 500ms;
+}
+
+
+</style>
+
+<ul>
+  <li><a href="#" data-content="Home">Home</a></li>
+  <li><a href="#" data-content="Work">Work</a></li>
+  <li><a href="#" data-content="About">About</a></li>
+  <li><a href="#" data-content="Blog">Blog</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Ajusta a imagem de forma a preencher a proporção sem distorcer a imagem 

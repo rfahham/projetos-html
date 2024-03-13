@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title>Ícone de Menu</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <style type="text/css">
+         .container {
+   display: inline-block;
+   cursor: pointer;
+}
+.barra1, .barra2, .barra3 {
+   width: 35px;
+   height: 5px;
+   background-color: #333;
+   margin: 6px 0;
+   transition: 0.4s;
+}
+.alterar .barra1 {
+   transform: rotate(-45deg) translate(-9px, 6px);
+}
+.alterar .barra2 {
+   opacity: 0;
+}
+.alterar .barra3 {
+   transform: rotate(45deg) translate(-8px, -8px);
+}
+      </style>
+      <script>
+         function transformarX(x) {
+   x.classList.toggle("alterar");
+}
+      </script>
+   </head>
+   <body>
+      <div class="container" onclick="transformarX(this)">
+         <div class="barra1"></div>
+         <div class="barra2"></div>
+         <div class="barra3"></div>
+      </div>
+   </body>
+</html>

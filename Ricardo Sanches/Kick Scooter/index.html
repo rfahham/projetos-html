@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<!-- Meta tags Obrigatórias -->
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"><!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+	<title>Kick Scooter</title>
+</head>
+<body>
+	<div class="homepage-hero-module">
+		<div class="video-container">
+			<div class="title-container">
+				<h1 class="display-3">Wellcome !!!</h1>
+				<p class="lead">Kick Scooter</p>
+			</div>
+			<div class="filter"></div><video autoplay="" class="fillWidth" loop=""><source src="images/moped.mp4" type="video/mp4"> <source src="images/moped..webm" type="video/webm"></video>
+			<div class="poster hidden"><img alt="" src="images/moped.jpg"></div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1>Kick Scooter</h1>
+	</div>
+
+
+	<!-- JavaScript (Opcional) -->
+	<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+	</script> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">
+	</script> 
+	<script type="text/javascript">
+	       //jQuery is required to run this code
+	$( document ).ready(function() {
+
+	   scaleVideoContainer();
+
+	   initBannerVideoSize('.video-container .poster img');
+	   initBannerVideoSize('.video-container .filter');
+	   initBannerVideoSize('.video-container video');
+
+	   $(window).on('resize', function() {
+	       scaleVideoContainer();
+	       scaleBannerVideoSize('.video-container .poster img');
+	       scaleBannerVideoSize('.video-container .filter');
+	       scaleBannerVideoSize('.video-container video');
+	   });
+
+	});
+
+	function scaleVideoContainer() {
+
+	   var height = $(window).height() + 5;
+	   var unitHeight = parseInt(height) + 'px';
+	   $('.homepage-hero-module').css('height',unitHeight);
+
+	}
+
+	function initBannerVideoSize(element){
+
+	   $(element).each(function(){
+	       $(this).data('height', $(this).height());
+	       $(this).data('width', $(this).width());
+	   });
+
+	   scaleBannerVideoSize(element);
+
+	}
+
+	function scaleBannerVideoSize(element){
+
+	   var windowWidth = $(window).width(),
+	   windowHeight = $(window).height() + 5,
+	   videoWidth,
+	   videoHeight;
+
+	   // console.log(windowHeight);
+
+	   $(element).each(function(){
+	       var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+	       $(this).width(windowWidth);
+
+	       if(windowWidth < 1000){
+	           videoHeight = windowHeight;
+	           videoWidth = videoHeight / videoAspectRatio;
+	           $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+	           $(this).width(videoWidth).height(videoHeight);
+	       }
+
+	       $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+	   });
+	}
+	</script>
+</body>
+</html>

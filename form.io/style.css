@@ -1,0 +1,27 @@
+.formbuilder {
+  height: 600px;
+}
+
+.formcomponents {
+  width: 30%;
+}
+
+.formarea {
+  width: 70%;
+}
+
+.component-settings .nav-link {
+  font-size: 0.6em;
+}
+
+.jsonviewer {
+  max-height: 600px;
+  overflow: scroll;
+}
+
+.form-type-select {
+  display: inline-block;
+  width: 100px;
+  height: 28px;
+  vertical-align: top;
+}

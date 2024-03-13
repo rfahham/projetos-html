@@ -1,0 +1,287 @@
+
+<!-- http://lpabon.github.io/openstack-summit-2014/#/ -->
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Breaking the mold with OpenStack Swift and GlusterFS</title>
+        <meta name="description" content="OpenStack Summit">
+        
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/beige.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Ricardo Fahham</h1>
+                    <h1>Analista de Teste</h1>
+                    <h1>Globo.com</h1>
+                    <!-- <h1>GlusterFS</h1> -->
+                </section>
+
+                <section>
+                    <h2>John Dickinson</h2>
+                    <h3>PTL, OpenStack Swift</h3>
+                    <h3>Director of Technology, SwiftStack</h3>
+                    <h4>@notmyname</h4>
+                    <br />
+                    <p />
+                    <h2>Luis Pab&oacute;n</h2>
+                    <h3>PTL, Gluster-Swift</h3>
+                    <h3>Principal Software Engineer, Red Hat</h3>
+                </section>
+
+                <section>
+                    <img src="images/swiftstack_logo.png"  style="border: none; box-shadow: none;"/>
+                </section>
+
+                <section data-background="#fff">
+                    <h2>Data consumption models have changed</h2>
+                    <img src="images/UnstructuredDataGrowth.jpg" style="border: none; box-shadow: none;" />
+                    <p><font size="3">Source: IDC</font></p>
+                </section>
+
+                <section data-background="#fff">
+                    <img src="images/old_v_new.png" style="border: none; box-shadow: none;" />
+                </section>
+
+                <section data-background="#fff">
+                    <h2>Parts of swift</h2>
+                    <img src="images/parts_of_swift.png" style="border: none; box-shadow: none;"/>
+                </section>
+
+                <section data-background="#fff">
+                    <h2>Content on the Web</h2>
+                    <img src="images/adrift.png" style="border: none; box-shadow: none;"/>
+                </section>
+
+                <section data-background="#fff">
+                    <h2>Video Streaming</h2>
+                    <img src="images/pac12_logo.jpg" style="border: none; box-shadow: none;"/>
+                    <ul>
+                        <li>Migration from SAN</li>
+                        <li>Move from tape archive to high availability</li>
+                    </ul>
+                </section>
+
+                <section data-background="#fff">
+                    <h2>Scientific Research</h2>
+                    <img src="images/fhcrc_logo.jpg" style="border: none; box-shadow: none;"/>
+                    <ul>
+                        <li>Massive data sets</li>
+                        <li>Multiple data centers</li>
+                    </ul>
+                </section>
+
+                <section data-background="#fff">
+                    <h2>Swift Users</h2>
+                    <h3>Around the world (and beyond)</h3>
+                    <img src="images/swift_users.png" style="border: none; box-shadow: none;"/>
+                </section>
+
+                <section>
+                    <h2>integration with openstack</h2>
+                    <img src="images/openstack-software-diagram.png" style="border: none; box-shadow: none;"/>
+                </section>
+
+                <section>
+                    <h2>storage policies</h2>
+                    <img src="images/storage_policies.png" />
+                </section>
+
+                <section data-background="#fff">
+                    <h2>Swift Extensibility</h2>
+                    <img src="images/parts_of_swift.png" style="border: none; box-shadow: none;"/>
+                </section>
+
+                <section data-background="#fff">
+                    <h2>Swift Extensibility: Volumes</h2>
+                    <img src="images/volumes.png" style="border: none; box-shadow: none;"/>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>GlusterFS</h1>
+                    <h2>as a</h2>
+                    <h1>Backend for Swift</h1>
+                </section>
+
+                <section>
+                    <h2>Introduction to GlusterFS</h2>
+                    <img src="images/diagram-glusterfs.png" />
+                </section>
+
+                <section>
+                    <h2>Use Case:</h2>
+                    <h2>Multiple protocol access</h2>
+                    <img src="images/swift_usecase.png" />
+                </section>
+
+                <section>
+                    <h2>April 2012</h2>
+                    <ul>
+                        <li class="fragment">GlusterFS patch applied to OpenStack Swift</li>
+                        <li class="fragment">No automated testing</li>
+                        <li class="fragment">0 developers on OpenStack Swift</li>
+                        <li class="fragment">1 developer on patch for Swift</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Great idea,</h1>
+                    <h1>bad executio</h1>
+                    <h1 class="fragment">n</h1>
+                </section>
+
+                <section>
+                    <h2>April 2013</h2>
+                    <ul>
+                        <li class="fragment">Created gluster-swift repo</li>
+                        <li class="fragment">Better integration with OpenStack Swift</li>
+                        <li class="fragment">Full CI automated testing</li>
+                        <li class="fragment">2 developers on OpenStack Swift</li>
+                        <li class="fragment">6 developers on gluster-swift</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Extended Volume Interface</h2>
+                    <p>
+                        Red Hat worked with the OpenStack Swift community to improve the volume interface in the object server.
+                        The interface is used by gluster-swift as well as other community members for their own backend
+                        storage systems.
+                    </p>
+                    <p><font size="3">
+                        Source:
+                        <a href="https://review.openstack.org/#/c/30051/">
+                            https://review.openstack.org/#/c/30051/
+                        </a>
+                    </font></p>
+                </section>
+
+                <section>
+                    <h1>Great idea,</h1>
+                    <h1>well executed</h1>
+                </section>
+
+                <section>
+                    <h1>...but we can</h1>
+                    <h1>do better</h1>
+                </section>
+
+                <section>
+                    <h2>April 2014</h2>
+                    <ul>
+                        <li class="fragment">Increased participation in OpenStack Swift</li>
+                        <li class="fragment">
+                            Identified gluster-swift technology is based on POSIX file semantics
+                        </li>
+                        <li class="fragment">gluster-swift project renamed to <i><a href="http://github.com/swiftonfile/swiftonfile">Swift-on-File</a></i></li>
+                        <li class="fragment">5 developers on OpenStack Swift</li>
+                        <li class="fragment">3 of the developers to also work on Swift-on-File</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Swiftonfile as a Storage Policy</h2>
+                    <img src="images/sp_sof.png" />
+                </section>
+
+                <section>
+                    <h2>Innovation through collaboration</h2>
+                    <blockquote cite="http://opensource.com/resources/what-open-source">
+                        <p><i>
+                            &ldquo;In general, open source projects, products, or initiatives are
+                            those that embrace and celebrate open exchange, collaborative
+                            participation, rapid prototyping, transparency, meritocracy,
+                            and community development.&rdquo;
+                        </i></p>
+                    </blockquote>
+                    <p><font size="3">
+                        Source:
+                        <a href="http://opensource.com/resources/what-open-source">
+                            http://opensource.com/resources/what-open-source
+                        </a>
+                    </font></p>
+                </section>
+
+                <section >
+                    <h2>This is as awesome as...</h2>
+                    <img src="images/gorilla_and_shark.png" />
+                    <p><font size="3">
+                        Credit: Christopher Hastings (
+                        <a href="http://www.drmcninja.com">http://www.drmcninja.com</a> )
+                    </font></p>
+                </section>
+
+                <section>
+                    <h1>Come join us</h1>
+                    <h3>This is how to work together in the community</h3>
+                    <ul>
+                        <li>Take advantage of existing extensibility</li>
+                        <li>Contribute back where more is needed</li>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'j/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>

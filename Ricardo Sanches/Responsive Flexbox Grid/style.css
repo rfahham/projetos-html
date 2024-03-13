@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #f1f1f1;
+  color: #333;
+  font: 12px/1 'Open Sans', sans-serif;
+}
+
+.wrapper {margin: 10px auto;}
+
+[class*="col-"] {
+  margin-bottom: 20px;
+  min-height: 30px;
+  background: #fff;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+@media all and (max-width: 500px){
+	.no-mobile {display: none;}
+}
+
+@media all and (min-width: 500px) {
+  .wrapper {
+    padding: 0 20px;
+	 background-color: #e1e1e1;
+	 padding-top: 20px;
+	 border-radius: 5px;
+  }
+
+  .row {display: flex;}
+
+  [class*="col-"] {margin-right: 20px;}
+
+  [class*="col-"]:last-child {margin-right: 0;}
+
+  .col-1 {flex: 1;}
+  .col-2 {flex: 2;}
+  .col-3 {flex: 3;}
+  .col-4 {flex: 4;}
+  .col-5 {flex: 5;}
+  .col-6 {flex: 6;}
+  .col-7 {flex: 7;}
+  .col-8 {flex: 8;}
+  .col-9 {flex: 9;}
+  .col-10 {flex: 10;}
+  .col-11 {flex: 11;}
+  .col-12 {flex: 12;}
+}
+@media all and (min-width: 100%) {
+  .wrapper {max-width: 100%;}
+}
+
+h2 {
+  font: 600 20px/1 'Open Sans', sans-serif;
+  color: #888;
+  margin: 20px 0;
+}
+
+h3 {
+	font: 600 15px/1 'Open Sans', sans-serif;
+	color: #999;
+	margin: 20px 0;
+}
+
+p {
+  font: 10px 'Open Sans', sans-serif;
+  color: #777;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+a:hover {text-decoration: underline;}
+
+img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
+
+
+

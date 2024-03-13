@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style type="text/css">
+
+   * {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0
+  }
+
+   .container {
+      margin-right: 30px;
+      margin-left: 30px;
+      margin-top: 30px;
+  }
+
+  body{
+    font-family: 'Roboto', sans-serif;
+  }
+
+ 
+     textarea{
+       background: #252525;
+       color: #fff;
+       font-size: 14px;
+       height:400px;
+       width:100%;
+       border:1px dotted gray;
+
+     }
+
+     textarea:focus, input:focus, select:focus {
+     box-shadow: 0 0 0 0;
+     border: 0 none;
+     outline: 0;
+  } 
+  </style>
+</head>
+<body>
+  <script>
+             function updateview() {
+             var edit = document.getElementById('edit');
+             var html = edit.value;
+             var encodedHtml = encodeURIComponent(html);
+             document.getElementById('directlink').href = '/htmlandjavascripteditor.php?source=' + encodedHtml;
+             document.getElementById('view').src = 'data:text/html,' + encodedHtml;
+             resizeMe(edit);
+             }
+             window.onload = updateview;
+  </script>
+
+
+  <div class="container">
+    
+    <textarea autofocus="" id='edit' onchange='updateview();' oninput='updateview();' onkeydown='updateview();' onkeyup='updateview();' onload='updateview();' placeholder='Digite seu código.' ></textarea>
+
+    <h3>Código Processado</h3>
+    <iframe id='view' name="view" style='width:100%;border:1px dotted gray;height:250px;'></iframe>
+    <a href='#' id='directlink'></a>
+    
+  </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="images/favicon.png" rel="icon" sizes="16x16" type="image/png">
+  <title>Vinhos</title><!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/javascript.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+  </script>
+  <script>
+       /* When your mouse cursor enter the background, the fading won't pause and keep playing */ 
+       $('.carousel').carousel({
+       pause: "false" /* Change to true to make it paused when your mouse cursor enter the background */
+    });
+  </script>
+</head>
+<body>
+  <div class="container-fluid main">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="#">WebWordWine</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="carousel carousel-fade slide" data-interval="3000" data-ride="carousel" id="myCarousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active background a"></div>
+        <div class="item background b"></div>
+        <div class="item background c"></div>
+      </div>
+    </div>
+    <div class="covertext">
+      <div class="col-lg-10" style="float:none; margin:0 auto;">
+        <h1 class="title">Vinhos</h1>
+        <h3 class="subtitle">Uma paixão que perdura por mais de 6.000 a.C.</h3>
+      </div><!-- <div class="col-xs-12 explore">
+      <a href="#"><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></a>
+    </div> -->
+    </div>
+  </div>
+  <div class="container">
+    <h1>O vinho...</h1>
+    <p>O vinho possui uma longa história que remonta pelo menos a aproximadamente 6000 a. C., pensando-se que tenha tido origem nos atuais territórios da Geórgia, Turquia ou Irã. Crê-se que o seu aparecimento na Europa ocorreu há aproximadamente 6500 anos, nas atuais Bulgária ou Grécia. Era muito comum na Grécia e Roma antigas. O vinho tem desempenhado um papel importante em várias religiões desde tempos antigos. O deus grego Dioniso e o deus romano Baco representavam o vinho, e ainda hoje o vinho tem um papel central em cerimônias religiosas cristãs e judaicas como a Eucaristia e o Kidush.</p>
+    <hr>
+    <h2>Quanto à cor</h2>
+    <div class="row">
+      <div class="col-6 col-md-4">
+        <figure class="figure">
+          <img alt="Tinto" class="figure-img img-fluid rounded" src="images/4.jpg">
+          <figcaption class="figure-caption">
+            <h5 class="card-title">Tinto</h5>
+          </figcaption>
+        </figure>
+        <p>Produzido a partir de variedades de uvas tintas, com longo contato com a casca da fruta. A diferença de tonalidade depende de tipo de fruto, do tempo e do método de envelhecimento.</p>
+      </div>
+      <div class="col-6 col-md-4">
+        <figure class="figure">
+          <img alt="Branco." class="figure-img img-fluid rounded" src="images/5.jpg">
+          <figcaption class="figure-caption">
+            <h5 class="card-title">Branco</h5>
+          </figcaption>
+        </figure>
+        <p>Produzido em sua maioria, a partir de uvas brancas. Quando produto de uvas tintas, a fermentação é feita com a ausência das cascas.</p>
+      </div>
+      <div class="col-6 col-md-4">
+        <figure class="figure">
+          <img alt="Rose" class="figure-img img-fluid rounded" src="images/6.jpg">
+          <figcaption class="figure-caption">
+            <h5 class="card-title">Rosado</h5>
+          </figcaption>
+          <p>Rosé ou clarete: com aparência intermediaria pode ser produzido de duas formas:</p>
+          <ul>
+            <li>de uvas tintas: com breve contato com as cascas que dão a pigmentação ao vinho, que após são separadas.</li>
+            <li>por corte: obtém-se pela mistura de um vinho branco com um vinho tinto.</li>
+          </ul>
+        </figure>
+      </div>
+    </div>
+    <hr>
+    <!-- MAIN (Center website) -->
+    <div class="main">
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')">Todos os Vinhos</button> <button class="btn" onclick="filterSelection('nature')">Tinto</button> <button class="btn" onclick="filterSelection('cars')">Branco</button> <button class="btn" onclick="filterSelection('people')">Rose</button>
+      </div><!-- Portfolio Gallery Grid -->
+      <div class="row">
+        <div class="column nature">
+          <div class="content">
+            <img alt="Mountains" src="https://media.jumbo.pt/Media/Images/390/000491390_1000_787.jpg" style="width:100%">
+            <h4>Mountains</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="content">
+            <img alt="Lights" src="https://s7d9.scene7.com/is/image/SAQ/11327720_is?$saq%2Dprod%2Dtra$" style="width:100%">
+            <h4>Lights</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="content">
+            <img alt="Nature" src="http://emporiopirana.com.br/wp-content/uploads/2017/09/eatinto.jpg" style="width:100%">
+            <h4>Forest</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column cars">
+          <div class="content">
+            <img alt="Car" src="/w3images/cars1.jpg" style="width:100%">
+            <h4>Retro</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column cars">
+          <div class="content">
+            <img alt="Car" src="/w3images/cars2.jpg" style="width:100%">
+            <h4>Fast</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column cars">
+          <div class="content">
+            <img alt="Car" src="/w3images/cars3.jpg" style="width:100%">
+            <h4>Classic</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column people">
+          <div class="content">
+            <img alt="Car" src="/w3images/people1.jpg" style="width:100%">
+            <h4>Girl</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column people">
+          <div class="content">
+            <img alt="Car" src="/w3images/people2.jpg" style="width:100%">
+            <h4>Man</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column people">
+          <div class="content">
+            <img alt="Car" src="/w3images/people3.jpg" style="width:100%">
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div><!-- END GRID -->
+      </div><!-- END MAIN -->
+    </div>
+    <hr>
+  </div>
+
+  <div class="jumbotron">
+  
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  
+</div>
+
+</body>
+</html>

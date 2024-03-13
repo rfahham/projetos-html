@@ -1,0 +1,9 @@
+h2{
+    font-family: "Verdana", Georgia, Serif;
+    opacity: 0.6;
+}
+
+p, li {
+    font-family: "Verdana", Georgia, Serif;
+    opacity: 0.5;
+}

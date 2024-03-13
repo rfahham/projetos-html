@@ -1,0 +1,21 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #006699;
+	color: white;
+}
+
+p, h1 {
+	text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+    filter: brightness(0.5) sepia(1) saturate(7) hue-rotate(180deg); 
+}
+
+

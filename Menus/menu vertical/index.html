@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title>Barra de ícones</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <style type="text/css">
+         body {
+   margin: 0;
+}
+.icon-bar {
+   width: 90px;
+   background-color: #888;
+}
+.icon-bar a {
+   display: block;
+   text-align: center;
+   padding: 16px;
+   transition: all 0.3s ease;
+   color: white;
+   font-size: 36px;
+}
+.icon-bar a:hover {
+   background-color: #000;
+}
+.active {
+   background-color: #7B90AF !important;
+}
+      </style>
+   </head>
+   <body>
+      <div class="icon-bar">
+         <a class="active" href="#">
+            <i class="fas fa-home"></i>
+         </a>
+         <a href="#">
+            <i class="fas fa-search"></i>
+         </a>
+         <a href="#">
+            <i class="fas fa-envelope"></i>
+         </a>
+         <a href="#">
+            <i class="fas fa-globe"></i>
+         </a>
+         <a href="#">
+            <i class="fas fa-trash"></i>
+         </a>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exemplo Geolocalização</title>
+</head>
+<body>
+  <div id="coordenadas"></div>
+
+  <script type="text/javascript">
+    // Verificando se existe suporte a geolocalizacão
+ if (navigator.geolocation) {
+  // Método getCurrentPosition() retorna
+  // objeto com atributos coords (coordenadas)
+  navigator.geolocation.getCurrentPosition(resultado);
+}
+  function resultado(posicao) {
+    // Objeto posição com propriedade coords
+    document.getElementById('coordenadas').innerHTML = 'Latitude : ' + posicao.coords.latitude + ', Longitude: ' + posicao.coords.longitude;
+  }
+  </script>
+</body>
+</html>
+
+<!-- Latitude : -23.00197, Longitude: -43.319489999999995 -->

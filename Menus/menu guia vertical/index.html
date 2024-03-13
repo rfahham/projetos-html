@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title>Guias</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <style type="text/css">
+         * {
+   box-sizing: border-box;
+}
+.guia {
+   /*overflow: hidden;*/
+   border: 1px solid #ccc;
+   background-color: #f1f1f1;
+   float: left;
+   width: 30%;
+   height: 300px;
+}
+.guiabotao {
+   /*float: left;*/
+   background-color: inherit;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   transition: 0.3s;
+   font-size: 17px;
+   display: block;
+   width: 100%;
+   padding: 22px 16px;
+   text-align: left;
+}
+.guiaconteudo {
+   /*border-top: none;*/
+   display: none;
+   border: 1px solid #ccc;
+   animation: fadeEffect 1s;
+   float: left;
+   padding: 0px 12px;
+   width: 70%;
+   border-left: none;
+   height: 300px;
+}
+      </style>
+      <script>
+         function abreGuia(evt, nomeGuia) {
+   var x, guiaconteudo, guiabotao;
+   guiaconteudo = document.getElementsByClassName("guiaconteudo");
+   for (x = 0; x < guiaconteudo.length; x++) {
+      guiaconteudo[x].style.display = "none";
+   }
+   guiabotao = document.getElementsByClassName("guiabotao");
+   for (x = 0; x < guiabotao.length; x++) {
+      guiabotao[x].className = guiabotao[x].className.replace(" ativo", "");
+   }
+   document.getElementById(nomeGuia).style.display = "block";
+   evt.currentTarget.className += " ativo";
+}
+document.getElementById("guiaPadrao").click();
+      </script>
+   </head>
+   <body>
+      <div class="guia">
+         <button class="guiabotao" onclick="abreGuia(event, 'Principal')" id="guiaPadrao">Principal</button>
+         <button class="guiabotao" onclick="abreGuia(event, 'Xubuntu')">Xubuntu</button>
+         <button class="guiabotao" onclick="abreGuia(event, 'Web')">HTML, CSS e JavaScript</button>
+      </div>
+      <div class="guiaconteudo" id="Principal">
+         <span onclick="this.parentElement.style.display='none'" class="fecharGuia">×</span>
+         <h3>Principal</h3>
+         <p>Uma pergunta que pode surgir é: 'Por que o nome não é universodosnerds?', a resposta é por dois motivos, primeiro a equipe queria um nome fácil de ser memorizado e pequeno e o segundo é porque a equipe quer disponibilizar este site em vários idiomas então não teria como englobar muitos idiomas com a palavra universo no nome.</p>
+      </div>
+      <div class="guiaconteudo" id="Xubuntu">
+         <span onclick="this.parentElement.style.display='none'" class="fecharGuia">×</span>
+         <h3>Xubuntu</h3>
+         <p>Xubuntu é uma distribuição GNU/Linux baseada no Ubuntu com o ambiente gráfico XFCE.</p> 
+      </div>
+      <div class="guiaconteudo" id="Web">
+         <span onclick="this.parentElement.style.display='none'" class="fecharGuia">×</span>
+         <h3>HTML, CSS e JavaScript</h3>
+         <p>São as principais linguagens para desenvolvimento Web.</p>
+      </div>
+   </body>
+</html>

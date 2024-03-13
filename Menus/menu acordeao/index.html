@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title>Colapsável ​​/ Acordeão</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <style type="text/css">
+         .acordeao {
+   background-color: #eee;
+   color: #444;
+   cursor: pointer;
+   padding: 18px;
+   width: 100%;
+   border: none;
+   text-align: left;
+   outline: none;
+   font-size: 15px;
+   transition: 0.4s;
+}
+.ativo, .acordeao:hover {
+   background-color: #7B90AF;
+}
+.acordeao:after {
+   content: '\2795';
+   font-size: 13px;
+   color: #777;
+   float: right;
+   margin-left: 5px;
+}
+.ativo:after {
+   content: "\2796";
+}
+.painel {
+   padding: 0 18px;
+   background-color: #ddd;
+   overflow: hidden;
+   /*display: none;*/
+   max-height: 0;
+   transition: max-height 0.2s ease-out;
+}
+
+      </style>
+
+
+   </head>
+   <body>
+      <button class="acordeao">Seção 1</button>
+      <div class="painel">
+         <p>Uma pergunta que pode surgir é: 'Por que o nome não é universodosnerds?', a resposta é por dois motivos, primeiro a equipe queria um nome fácil de ser memorizado e pequeno e o segundo é porque a equipe quer disponibilizar este site em vários idiomas então não teria como englobar muitos idiomas com a palavra universo no nome.</p>
+      </div>
+      <button class="acordeao">Seção 2</button>
+      <div class="painel">
+         <p>Uma pergunta que pode surgir é: 'Por que o nome não é universodosnerds?', a resposta é por dois motivos, primeiro a equipe queria um nome fácil de ser memorizado e pequeno e o segundo é porque a equipe quer disponibilizar este site em vários idiomas então não teria como englobar muitos idiomas com a palavra universo no nome.</p>
+      </div>
+      <button class="acordeao">Seção 3</button>
+      <div class="painel">
+         <p>Uma pergunta que pode surgir é: 'Por que o nome não é universodosnerds?', a resposta é por dois motivos, primeiro a equipe queria um nome fácil de ser memorizado e pequeno e o segundo é porque a equipe quer disponibilizar este site em vários idiomas então não teria como englobar muitos idiomas com a palavra universo no nome.</p>
+      </div>
+   </body>
+         <script>
+         var acordeoes = document.getElementsByClassName("acordeao");
+for (var x = 0; x < acordeoes.length; x++) {
+   acordeoes[x].addEventListener("click", function() {
+      this.classList.toggle("ativo");
+      var painel = this.nextElementSibling;
+      /*if (painel.style.display === "block") {
+         painel.style.display = "none";
+      } else {
+         painel.style.display = "block";
+      }*/
+      if (painel.style.maxHeight) {
+         painel.style.maxHeight = null;
+      } else {
+         painel.style.maxHeight = painel.scrollHeight + "px";
+      }
+   });
+}
+      </script>
+</html>

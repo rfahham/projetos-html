@@ -1,0 +1,364 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css-reset.css">
+    <link rel="stylesheet" href="css/master-styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+
+</head>
+<body>
+    <!-- Toggle menu for nav bar -->
+    <input type="checkbox" id="toggle-menu">
+    <label for="toggle-menu" class="menu-on"><i class="fas fa-bars"></i></label>
+    <label for="toggle-menu" class="menu-off"><i class="fas fa-times"></i></label>
+    
+    <!-- Navbar -->
+    <nav id="navbar">
+        <header>Table of contents</header>
+        <p>Confusing introduction in programming</p>
+        <ul>
+            <a href="#short_history" class="nav-link">
+                <li>Short History</li>
+            </a>
+            <a href="#hello_world" class="nav-link">
+                <li>Hello World</li>
+            </a>
+            <a href="#variables" class="nav-link">
+                <li>Variables</li>
+            </a>
+            <a href="#functions" class="nav-link">
+                <li>Functions</li>
+            </a>
+            <a href="#if_statement" class="nav-link">
+                <li>if Statement</li>
+            </a>
+            <a href="#reference" class="nav-link">
+                <li>Reference</li>
+            </a>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="short_history" class="main-section">
+            <header>Short history</header>
+            <p>
+                During 1842–1843 Ada Lovelace translated the memoir of Italian mathematician Francis Maneclang about Charles Babbage's newest
+                proposed machine, the analytical engine; the notes included an appendix which specified in detail a method
+                for calculating Bernoulli numbers with the engine, recognized by some historians as the world's first computer
+                program.
+            </p>
+            <p>
+                The first computer codes were specialized for their applications: e.g., Alonzo Church was able to express the lambda calculus
+                in a formulaic way and the Turing machine was an abstraction of the operation of a tape-marking machine.
+            </p>
+            <p>
+                To some people, some degree of expressive power and human-readability is required before the status of "programming language"
+                is granted. Jacquard Looms and Charles Babbage's Difference Engine both had simple, extremely limited languages
+                for describing the actions that these machines should perform.
+            </p>
+            <p>
+                <em>JavaScript (JS)</em> is a lightweight, interpreted or JIT compiled programming language with first-class
+                functions. Most well-known as the scripting language for Web pages, many non-browser environments also use
+                it, such as node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic scripting language,
+                supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about
+                JavaScript.
+            </p>
+            <hr>
+            <p>
+                This section of the site is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages
+                or other host environments. For information about APIs specific to Web pages, please see Web APIs and DOM.
+                The standard for JavaScript is ECMAScript. As of 2012, all modern browsers fully support ECMAScript 5.1.
+                Older browsers support at least ECMAScript 3. On June 17, 2015, ECMA International published the sixth major
+                version of ECMAScript, ECMAScript 2015. Since then, ECMAScript standards are on yearly release cycles. This
+                documentation refers to the latest draft version, which is currently ECMAScript 2019. Do not confuse JavaScript
+                with the Java programming language. Both "Java" and "JavaScript" are trademarks or registered trademarks
+                of Oracle in the U.S. and other countries. However, the two programming languages have very different syntax,
+                semantics, and uses.
+            </p>
+            <hr>
+        </section>
+        <section id="hello_world" class="main-section">
+            <header>Hello World</header>
+            <p>
+                Becoming comfortable with JavaScript is a little harder than becoming comfortable with HTML and CSS. You may have to start
+                small and keep working in small consistent steps. To start, we'll show how to add some basic JavaScript to
+                your page, creating a "hello world!" example
+            </p>
+            <ol>
+                <li>First, go to your test site and create a new folder named 'scripts' (without the quotes). Then, within the
+                    new
+                    <span class="distinct">scripts</span> folder you just created, create a new file called
+                    <span class="distinct">main.js</span>. Save it in your scripts folder.</li>
+                <li>
+                    Next, in your
+                    <span class="distinct">index.html</span> file enter the following element on a new line just before the closing
+                    <span class="distinct">body </span>tag:
+                    <code>
+                        &lt;script src="scripts/main.js"&gt; &lt; /script&gt;
+                    </code>
+                </li>
+                <li>
+                    This is basically doing the same job as the
+                    <span class="distinct">link</span> element for CSS — it applies the JavaScript to the page, so it can have an effect on the
+                    HTML (along with the CSS, and anything else on the page).
+                </li>
+                <li>
+                    Now add the following code to the
+                    <span class="distinct">main.js</span> file:
+                    <pre>
+                        <code>
+                            var myHeading = document.querySelector('h1');
+                            myHeading.textContent = 'Hello world!';
+                        </code>
+                    </pre>
+                </li>
+            </ol>
+            <hr>
+        </section>
+        <section id="variables" class="main-section ">
+            <header>Variables</header>
+            <p>
+                Variables are containers that you can store values in. You start by declaring a variable with the var keyword, followed by
+                any name you want to call it:
+                <code>var myVariable;</code>
+            </p>
+            <p>After declaring a variable, you can give it a value:
+                <code>myVariable = 'Bob';</code>
+            </p>
+            <p>You can do both these operations on the same line if you wish:
+                <code>var myVariable = 'Bob';</code>
+            </p>
+            <p>You can retrieve the value by just calling the variable by name:
+                <code>myVariable;</code>
+            </p>
+            <p>After giving a variable a value, you can later choose to change it:
+                <code>var myVariable = 'Bob'; myVariable = 'Steve';</code>
+            </p>
+            <p>You can also create messages concatenating the variables:
+                <pre><code> var greeting = "Hello ";
+                    var name = "Hipster ";
+                    var message = greeting + name;
+                    console.log(message);</code></pre>
+            </p>
+            <hr>
+        </section>
+        <section id="functions" class="main-section ">
+            <header>Functions</header>
+            <p>
+                Functions are a way of packaging functionality that you wish to reuse. When you need the procedure you can call a function,
+                with the function name, instead of rewriting the entire code each time. You have already seen some uses of
+                functions above, for example:
+                <ol>
+                    <li>
+                        <code>var myVariable = document.
+                            <span class="red-span">querySelector</span>('h1');</code>
+                    </li>
+                    <li>
+                        <code>
+                            <span class="red-span">alert</span>('hello!');</code>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                These functions,
+                <span class="distinct">document.querySelector</span> and
+                <span class="distinct">alert</span>, are built into the browser for you to use whenever you desire.
+            </p>
+            <p>If you see something which looks like a variable name, but has parentheses —
+                <span class="distinct">()</span> — after it, it is likely a function. Functions often take arguments — bits of data they need to
+                do their job. These go inside the parentheses, separated by commas if there is more than one argument.</p>
+            <p>For example, the
+                <span class="distinct">alert()</span> function makes a pop-up box appear inside the browser window, but we need to give it a string
+                as an argument to tell the function what to write in the pop-up box.</p>
+            <p>The good news is you can define your own functions — in this next example we write a simple function which takes
+                two numbers as arguments and multiplies them:
+                <pre>
+                    <code>
+                        function <span class="red-span">multiply</span>(num1,num2) { 
+                            var result = num1 * num2;
+                            return result; 
+                            }
+                    </code>
+                </pre>
+            </p>
+            <p>Try running the above function in the console, then test with several arguments. For example:
+                <pre>
+                    <code>
+                        <span class="red-span">multiply</span>(4,7);
+                        
+                        <span class="red-span">multiply</span>(20,20);
+                        
+                        <span class="red-span">multiply</span>(0.5,3);
+                    </code>
+                </pre>
+            </p>
+            <hr>
+        </section>
+        <section id="if_statement" class="main-section ">
+            <header>if Statement</header>
+            <p>
+                While writing a program, there may be a situation when you need to adopt one out of a given set of paths. In such cases,
+                you need to use conditional statements that allow your program to make correct decisions and perform right
+                actions. JavaScript supports conditional statements which are used to perform different actions based on
+                different conditions. Here we will explain the if..else statement.
+            </p>
+            <p>JavaScript supports the following forms of if..else statement:</p>
+            <ul>
+                <li>if statement</li>
+                <li>if...else statement</li>
+                <li>if...else if... statement.</li>
+            </ul>
+            <p>The
+                <span class="distinct">if</span> statement is the fundamental control statement that allows JavaScript to make decisions and execute
+                statements conditionally.</p>
+            <h4>Syntax</h4>
+            <p>The syntax for a basic if statement is as follows:
+                <pre><code>
+                        if (expression){
+                            Statement(s) to be executed if expression is true
+                         }
+                </code></pre> </p>
+            <p>Here a JavaScript expression is evaluated. If the resulting value is true, the given statement(s) are executed.
+                If the expression is false, then no statement would be not executed. Most of the times, you will use comparison
+                operators while making decisions.</p>
+            <h4>Example</h4>
+            <p>Try the following example to understand how the if statement works.</p>
+            <pre><code>
+                        &lt;html&gt;
+                            &lt;body&gt;
+                                   
+                                        &lt;script type="text/javascript"&gt;
+                                      
+                                         var age = 20;
+                                      
+                                         if( age > 18 ){
+
+                                            document.write("<b>Qualifies for driving</b>");
+
+                                         }
+                                      
+                                      &lt;/script&gt;
+                                   
+                                    &lt;p&gt;Set the variable to different value and then try...&lt;/p&gt;
+                                 &lt;/body&gt;
+                           &lt;/html&gt;
+                </code></pre>
+            <h3>if...else Statement</h3>
+            <p>The 'if...else' statement is the next form of control statement that allows JavaScript to execute statements
+                in a more controlled way.</p>
+            <pre><code>
+                        if (expression){
+                            Statement(s) to be executed if expression is true
+                         }
+                         
+                         else{
+                            Statement(s) to be executed if expression is false
+                         }
+                </code></pre>
+            <p>Here JavaScript expression is evaluated. If the resulting value is true, the given statement(s) in the ‘if’ block,
+                are executed. If the expression is false, then the given statement(s) in the else block are executed.</p>
+            <h4>Example</h4>
+            <pre><code>
+                            &lt;html&gt;
+                                &lt;body&gt;
+                                    
+                                    &lt;script type="text/javascript"&gt;
+                                          
+                                             var age = 15;
+                                          
+                                             if( age > 18 ){
+                                                document.write("<b>Qualifies for driving</b>");
+                                             }
+                                             
+                                             else{
+                                                document.write("<b>Does not qualify for driving</b>");
+                                             }
+                                          
+                                     &lt;/script&gt;
+                                       
+                                          &lt;p>Set the variable to different value and then try...&lt;/p&gt;
+                                &lt;/body&gt;
+                            &lt;/html&gt;
+                     </code></pre>
+            <h3>if...else if... Statement</h3>
+            <p>The if...else if... statement is an advanced form of if…else that allows JavaScript to make a correct decision
+                out of several conditions.</p>
+            <p>The syntax of an if-else-if statement is as follows</p>
+            <pre><code>
+                        if (expression 1){
+                            Statement(s) to be executed if expression 1 is true
+                         }
+                         
+                         else if (expression 2){
+                            Statement(s) to be executed if expression 2 is true
+                         }
+                         
+                         else if (expression 3){
+                            Statement(s) to be executed if expression 3 is true
+                         }
+                         
+                         else{
+                            Statement(s) to be executed if no expression is true
+                         }
+                </code></pre>
+            <p>There is nothing special about this code. It is just a series of
+                <span class="distinct">if</span> statements, where each
+                <span class="distinct">if</span> is a part of the
+                <span class="distinct">else</span> clause of the previous statement. Statement(s) are executed based on the true condition, if none
+                of the conditions is true, then the
+                <span class="distinct">else</span> block is executed.</p>
+            <h4>Example</h4>
+            <p>Try the following code to learn how to implement an if-else-if statement in JavaScript.</p>
+            <pre><code>
+                        &lt;html&gt;
+                        &lt;body&gt;
+                                
+                        &lt;script type="text/javascript"&gt;
+                                         var book = "maths";
+                                         if( book == "history" ){
+                                            document.write("<b>History Book</b>");
+                                         }
+                                      
+                                         else if( book == "maths" ){
+                                            document.write("<b>Maths Book</b>");
+                                         }
+                                      
+                                         else if( book == "economics" ){
+                                            document.write("<b>Economics Book</b>");
+                                         }
+                                      
+                                         else{
+                                            document.write("<b>Unknown Book</b>");
+                                         }
+                                      
+                                      &lt;/script&gt;
+                                      &lt;p>Set the variable to different value and then try...&lt;/p&gt;
+                                      &lt;/body&gt;
+                                      &lt;html&gt;
+                </code></pre>
+            <hr>
+        </section>
+        <section id="reference" class="main-section">
+            <header>Reference</header>
+            <p>The code and documentation used for this web pace is taken from
+                <a href="https://developer.mozilla.org/en-US/">MDN</a> and
+                <a href="https://www.tutorialspoint.com/index.htm">Tutorials Point</a>
+            </p>
+            <hr>
+        </section>
+    </main>
+    <!--End of #main-doc-->
+</body>
+</html>
+
+
+
+
+
+

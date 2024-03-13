@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>responsive-css-grid</title>
+  <style type="text/css">
+  * {
+padding:0;
+margin:0;
+vertical-align:baseline;
+list-style:none;
+border:0
+}
+    body {
+  padding: 20px;
+  font-family: Helvetica;
+  background-color: #20262e;
+}
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-gap: 10px;
+  list-style-type: none;
+}
+li {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+.info {
+  text-align: center;
+  font-size: 13px;
+  padding-top: 20px;
+  color: #fff;
+}
+  </style>
+</head>
+<body>
+  <ul>
+  <li>A</li>
+  <li>B</li>
+  <li>C</li>
+  <li>D</li>
+  <li>E</li>
+  <li>F</li>
+</ul>
+
+<div class="info">Resize this panel to see grids respond</div>
+</body>
+</html>

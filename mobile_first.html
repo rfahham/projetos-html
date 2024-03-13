@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	.content,
+.grid,
+.grid-inner-wrapper {
+  float: left;
+  width: 100%;
+}
+
+.grid_item {
+  float: left;
+  width: 100%;
+  height: 8rem;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.grid_item .caption {
+  font-size: 4rem;
+}
+
+.intro {
+  float: left;
+  width: 100%;
+  height: 16rem;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.sidebar {
+  float: left;
+  width: 100%;
+  height: 16rem;
+  margin-top: 1em;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .grid_item {
+    width: 49%;
+  }
+  .grid_item.grid2,
+  .grid_item.grid4,
+  .grid_item.grid6 {
+    margin-left: 2%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .grid_item {
+    width: 32%;
+  }
+  .grid_item.grid2,
+  .grid_item.grid3,
+  .grid_item.grid5,
+  .grid_item.grid6 {
+    margin-left: 2%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .grid {
+    width: 65%;
+  }
+  .grid_item {
+    width: 49%;
+  }
+  .grid_item.grid2,
+  .grid_item.grid4,
+  .grid_item.grid6 {
+    margin-left: 2%;
+  }
+  .intro {
+    height: 14rem;
+  }
+  .sidebar {
+    float: left;
+    width: 33%;
+    height: 41rem;
+    margin-left: 2%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .grid {
+    width: 75%;
+  }
+  .grid_item {
+    width: 32%;
+  }
+  .grid_item.grid2,
+  .grid_item.grid3,
+  .grid_item.grid5,
+  .grid_item.grid6 {
+    margin-left: 2%;
+  }
+  .intro {
+    height: 23rem;
+  }
+  .sidebar {
+    float: left;
+    width: 23%;
+    height: 41rem;
+    margin-left: 2%;
+  }
+}
+
+
+/* Mobile First Grid */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: helvetica, arial, sans-serif;
+  color: white;
+  font-size: 16px;
+}
+
+body {
+  float: left;
+  width: 100%;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.body {
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+
+.header {
+  float: left;
+  width: 100%;
+  min-height: 8rem;
+  padding: 10px;
+}
+
+.nav {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  margin-top: 1em;
+}
+
+.nav_item {
+  float: left;
+  clear: left;
+  width: 100%;
+  display: none;
+}
+
+.nav_item.nav_control {
+  display: block;
+}
+
+.nav_item span {
+  float: left;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav_item {
+    display: block;
+    clear: none;
+    width: 15%;
+    margin-top: 0;
+  }
+  .nav_item.nav2,
+  .nav_item.nav3,
+  .nav_item.nav4,
+  .nav_item.nav5,
+  .nav_item.nav6 {
+    margin-left: 2%;
+  }
+  .nav_item.nav_control {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav_wrap {
+    float: left;
+    width: 980px;
+  }
+}
+
+.footer {
+  float: left;
+  width: 100%;
+  margin-top: 1em;
+  padding: 10px;
+}
+
+.header {
+  background-color: #dce8ef;
+}
+
+.header h1 {
+  color: #38a1d6;
+}
+
+.nav {
+  background-color: #333;
+}
+
+.nav_item span {
+  background-color: #595959;
+}
+
+.grid_item,
+.intro {
+  background-color: #38a1d6;
+}
+
+.sidebar {
+  background-color: #2176a0;
+}
+
+.footer {
+  background-color: #333;
+}
+
+
+/*# sourceMappingURL=style.css.map */
+</style>
+
+</head>
+<body>
+	<div class="body">
+  <div class="header">
+    <h1>Mobile-First Grid</h1>
+  </div>
+  <div class="nav">
+    <div class="nav_wrap">
+      <div class="nav_item nav_control"><span>menu</span></div>
+      <div class="nav_item nav_link nav1"><span>nav1</span></div>
+      <div class="nav_item nav_link nav2"><span>nav2</span></div>
+      <div class="nav_item nav_link nav3"><span>nav3</span></div>
+      <div class="nav_item nav_link nav4"><span>nav4</span></div>
+      <div class="nav_item nav_link nav5"><span>nav5</span></div>
+      <div class="nav_item nav_link nav6"><span>nav6</span></div>
+     <!-- (div.nav_item.nav$>span.caption{nav$})*6 -->
+    </div>
+  </div>
+  <div class="content">
+    <div class="grid">
+      <div class="grid-inner-wrapper">
+        <div class="grid_item grid1"><span class="caption">grid1</span></div>
+        <div class="grid_item grid2"><span class="caption">grid2</span></div>
+        <div class="grid_item grid3"><span class="caption">grid3</span></div>
+        <div class="grid_item grid4"><span class="caption">grid4</span></div>
+        <div class="grid_item grid5"><span class="caption">grid5</span></div>
+        <div class="grid_item grid6"><span class="caption">grid6</span></div>
+        
+      </div>
+      <div class="intro">
+        <span>
+                    Welcome to this demo page. I've hand coded the CSS with a mobile-first approach.
+                </span>
+      </div>
+    </div>
+
+    <div class="sidebar">
+    </div>
+  </div>
+  <div class="footer">
+    <span>footer text.</span>
+  </div>
+</div>
+</body>
+</html>

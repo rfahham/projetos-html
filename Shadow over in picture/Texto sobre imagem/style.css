@@ -1,0 +1,22 @@
+.image { 
+  position: relative; 
+
+}
+
+h4 { 
+   position: absolute;    
+      width: 100%; 
+      color: #fff;
+      float: left;   
+      position: absolute;      
+      font-size: 40px;
+      font-family: "Verdana";
+      text-align: center;
+      max-height:auto;
+      z-index:20;
+      text-shadow:1px 1px 2px #000;
+      -moz-text-shadow:1px 1px 2px #000;
+      -ms-text-shadow:1px 1px 2px #000;
+      -o-text-shadow:1px 1px 2px #000;
+      -webkit-text-shadow:1px 1px 2px #000;
+}

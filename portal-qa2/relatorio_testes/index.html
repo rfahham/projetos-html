@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Relatórios Google Site</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <style>
+
+body {
+   font-family: "globocom";
+  }
+
+  @font-face {
+   font-family: "globocom";
+   src: url("../fonts/vag-rundschrift-d.ttf") format("truetype");
+  }
+  
+       
+
+img {
+    width: 200px;
+    height: 200px;
+
+}
+
+.portfolio-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.portfolio-grid li {
+    display: inline-block;
+    margin: 5px 5px 5px 5px;
+    vertical-align: top;
+    width:212px;
+}
+
+.portfolio-grid li > a,
+.portfolio-grid li > a img {
+    width: 100%;
+    border: none;
+    outline: none;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.portfolio-grid li > a img:hover {
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+
+/******************************************
+ Animate.CSS By Dan Eden
+******************************************/
+
+.animated{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;}
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        -webkit-transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-moz-keyframes flipInX {
+    0% {
+        -moz-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -moz-transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        -moz-transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        -moz-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-o-keyframes flipInX {
+    0% {
+        -o-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -o-transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        -o-transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        -o-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+.flipInX {
+    -webkit-backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    -moz-backface-visibility: visible !important;
+    -moz-animation-name: flipInX;
+    -o-backface-visibility: visible !important;
+    -o-animation-name: flipInX;
+    backface-visibility: visible !important;
+    animation-name: flipInX;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="row shadow p-3 mb-5 bg-body rounded" style="text-align: center;">
+	  <div>
+			<h2 class="">Relatórios Google Site</h2>
+		</div>
+	</div>
+
+  <div class="container">
+  <div id="portfolio">
+  <ul class="portfolio-grid">
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/afiliadas" class="animated flipInX">
+              <img src="imagens/afiliadas.jpg" alt="afiliadas"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/bigdata--globoid" class="animated flipInX">
+              <img src="imagens/bigdata&globoid.jpg" alt="Big Data e GloboId"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/jornalismo" class="animated flipInX">
+              <img src="imagens/g1.jpg" alt="G1"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/esportes" class="animated flipInX">
+              <img src="imagens/ge.png" alt="GE" />
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/" class="animated flipInX">
+              <img src="imagens/globosat.png" alt="globosat"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/entretenimento" class="animated flipInX">
+              <img src="imagens/gshow.png" alt="gshow"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/grupo-globo" class="animated flipInX">
+              <img src="imagens/grupoglobo.jpg" alt="grupoglobo"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/home" class="animated flipInX">
+              <img src="imagens/globocom.png" alt="home"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/infra" class="animated flipInX">
+              <img src="imagens/infra.jpg" alt="infra"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/legado-qa2" class="animated flipInX">
+              <img src="imagens/legado.jpg" alt="legado"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/parceiros" class="animated flipInX">
+              <img src="imagens/parceiros.jpg" alt="parceiros"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/plataformas" class="animated flipInX">
+              <img src="imagens/plataformas.jpg" alt="plataformas"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/" class="animated flipInX">
+              <img src="imagens/rede-globo.png" alt="rede globo"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/vendas" class="animated flipInX">
+              <img src="imagens/vendas.jpg" alt="vendas"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://sites.google.com/a/corp.globo.com/qa2/relatorios/webmedia" class="animated flipInX">
+              <img src="imagens/webmedia.jpg" alt="webmedia"/>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+
+</body>
+</html>

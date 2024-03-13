@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COMO DEIXAR UMA IMAGEM REDONDA E COM SOMBRA EM CSS</title>
+</head>
+<body>
+<h1>COMO DEIXAR UMA IMAGEM REDONDA E COM SOMBRA EM CSS</h1>
+
+<style type="text/css">
+	
+        .round 
+        {
+                margin:10px;
+                border-radius: 50%;
+                overflow: hidden;
+                width: 200px;
+                height: 200px;
+                box-shadow: 3px 3px 5px #555; /* sombra deslocada em 3px para baixo e 3px para direita, borrada em 5px e com cor cinza */
+
+         }
+
+         .round div 
+        {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    background-size: cover; /*ajusta a imagem dentro do div, mantendo a proporção da imagem */
+                    background-position: center center
+            }
+
+</style>
+
+  <div class="round">
+         <div style="background-image: url('http://www.cosy.sbg.ac.at/~pmeerw/Watermarking/lena_color.gif');"></div>
+    </div>
+
+</body>
+</html>

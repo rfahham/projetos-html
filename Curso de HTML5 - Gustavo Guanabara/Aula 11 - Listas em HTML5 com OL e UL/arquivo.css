@@ -1,0 +1,61 @@
+@charset="utf-8"
+
+ 	
+body { /* nome do arquivo de imagem, deve estar na mesma pasta do index.html */
+ 				background-color: #6495ED; /* Cor do fundo em hexadecimal - modelo antiga*/
+ 				background-color: rgb(35 137 195); /* Cor do fundo em RGB - modelo atual*/
+ 				background-image: url(colocar o endereço da imagem);
+				color: rgb(0,0,0); /* cor da fonte em RGB 0,0,0 = preto */
+				color: rgba(0,0,0,0); /* Canal Alfa Transparencia varia de 0 a 1 */	
+				color: rgba(0,0,0,0.1); /* 10% - Canal Alfa Transparencia */
+				color: rgba(0,0,0,0.5); /* 50% - Canal Alfa Transparencia */
+				background-color: hsl(165,81%,93%); /* Usando matis, saturação e luminosidade */
+				background-color: hsla(165,81%,93%, 0.5); /* Usando matis, saturação e luminosidade e o canal alfa*/
+ 					}
+
+h1,h2, {
+ 				color: #3CB371; /* cor da fonte de h2 */
+ 				text-indent: 50px; /* Identação */
+ 				
+ 			}
+
+
+figure.foto-legenda
+			{
+			position: relative;
+			border: 8px solid white; /* uma borda com 8px de largura, solida e da cor vermelha*/
+			box-shadow: 1px 1px 4px black; /* borda com sombra */
+			}
+
+figure.foto-legenda img { 
+width: 100%;
+height: 100%;
+			}
+
+figure.foto-legenda figcaption{
+	opacity: 0;
+	position: absolute; /* posição absoluta da legenda - tem que definir a posição relativa em figure foto-legenda*/
+	top: 0px; /* posição 0*/
+	background-color: rgba(0,0,0,0.4); /* cor do fundo da legenda*/
+	color: white; /* cor da fonte*/
+	width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+
+}
+
+figure.foto-legenda:hover figcaption{
+	opacity:1;
+}
+
+
+
+
+OBS.: Criar no arquivo index.html um link chamando o arquivo .css dentro da tag head:
+
+<link rel="stylesheet" type="text/css" href="nome do arquivo .css"/>
+
+/*     */  comentários do css
+ 

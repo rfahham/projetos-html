@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+
+  
+  
+  <title>
+    Entendendo o DOM (Document Object Model) - Artigos sobre HTML, JavaScript, CSS e desenvolvimento web
+  </title>
+  
+
+</head>
+<body>
+  
+  <header>
+
+  </header>
+
+
+<header class="tb-post-header">
+  <h1 class="tb-hero-title">
+      Entendendo o DOM (Document Object Model)
+  </h1>
+  <p class="tb-hero-p">
+      O DOM explicado de uma maneira fácil.
+  </p>
+      
+    <span class="tb-author">por <a href="/authors/leonardo-maldonado">Leonardo Maldonado</a></span>
+    
+
+    <span class="tb-postdate">08/02/2018</span>
+
+  <a href="https://tableless.com.br/entendendo-o-dom-document-object-model/#disqus_thread" class="tb-lnk-comments">Comentários</a>
+  <span class="tb-post-time-read">~ 8 min. / 1531 palavras</span>
+</header>
+
+<div class="tb-post">
+
+  <section class="tb-post-content">
+    <article class="tb-post-article">
+      
+
+<h2 id="entendendo-o-dom-document-object-model">Entendendo o DOM (Document Object Model)</h2>
+
+<p>Você estudou bastante HTML, criou suas primeiras tags, aprendeu CSS, fez formulários bonitos, botões incríveis, páginas responsivas e começou mostrar para todo mundo como aquilo é incrível, mas chega uma hora que você deseja dar um passo a mais no seu aprendizado e se pergunta: ”Mas como eu posso dar movimento a minha página? Queria tanto que aquele botão por exemplo mudasse algo nela!”. É aí que entra o DOM, algo que constantemente você ouve falar por aí, mas não sabe explicar ao certo o que é.</p>
+
+<p>Sabe aquelas animações legais que você vê por aí e você fala “Uau, queria tanto fazer algo assim, mas como?”, elas são feitas manipulando o DOM (Document Object Model), e esse artigo vai te explicar do zero o que ele é e como manipulá-lo.</p>
+
+<h3 id="então-o-que-é-o-dom">Então, o que é o DOM?</h3>
+
+<p>O DOM (Document Object Model) é uma interface que representa como os documentos HTML e XML são lidos pelo seu browser. Após o browser ler seu documento HTML, ele cria um objeto que faz uma representação estruturada do seu documento e define meios de como essa estrutura pode ser acessada. Nós podemos acessar e manipular o DOM com JavaScript, é a forma mais fácil e usada.</p>
+
+<h3 id="quais-as-vantagens-do-dom">Quais as vantagens do DOM?</h3>
+
+<p>Com ele você tem infinitas possibilidades, você pode criar aplicações que atualizam os dados da página sem que seja necessário uma atualização. Pode também criar aplicações que são customizáveis pelo usuário, mudar o layout da página sem que seja necessário atualização. Arrastar, mover, excluir elementos. Ou seja, você tem infinitas possibilidades, milhares de coisas que você pode fazer manipulando o DOM, basta você usar sua criatividade.</p>
+
+<h3 id="como-ele-é-representado-pelo-browser">Como ele é representado pelo browser:</h3>
+
+<p><img src="https://i.imgur.com/lu4PMfw.jpg" alt="" /></p>
+
+<p>A estrutura que o DOM constrói a partir da leitura do seu documento HTML.</p>
+
+<p>Nessa imagem vemos a estrutura do DOM, suas marcações e como ele é montado pelo browser. Nessa base, temos 4 pontos importantes que você vai ver bastante daqui pra frente:</p>
+
+<ol>
+<li>**Document: **que como o nome diz, cuida de documentos HTML.</li>
+<li>**Elements: **são todas as tags que estão em arquivos HTML ou XML se transformam em elementos da árvore DOM.</li>
+<li><strong>Texts</strong>: É o texto que vai entre os elementos. Todo o conteúdo das tags.</li>
+<li><strong>Attributes</strong>: É a junção de todos atributos para um nó específico. No caso, o attribute <em>class=”hero”</em> está apontando para o elemento <code>&lt;p&gt;</code>.</li>
+</ol>
+
+<h3 id="manipulando-o-dom">Manipulando o DOM</h3>
+
+<p>Agora vamos a parte mais legal de todas: manipular o DOM. Primeiramente, vamos criar um HTML como exemplo para mostrar como os métodos e os eventos funcionam.</p>
+
+<p>O HTML:</p>
+
+<pre><code>  &lt;!DOCTYPE html&gt;
+  &lt;html lang=&quot;pt-br&quot;&gt;
+  &lt;head&gt;
+      &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+      &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+      &lt;title&gt;Entendo o DOM (Document Object Model)&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;div class=&quot;container&quot;&gt;
+          &lt;h1&gt;&lt;time&gt;00:00:00&lt;/time&gt;&lt;/h1&gt;
+          &lt;button id=&quot;start&quot;&gt;Start&lt;/button&gt;
+          &lt;button id=&quot;stop&quot;&gt;Stop&lt;/button&gt;
+          &lt;button id=&quot;reset&quot;&gt;Reset&lt;/button&gt;
+      &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre>
+
+<p>Bem simples, agora vamos aprender um pouco sobre os métodos do DOM, é com eles que vamos pegar nossos elementos e criar interatividade.</p>
+
+<h3 id="métodos">Métodos</h3>
+
+<p>O DOM possui muitos métodos, são eles que fazem a ligação entre os nodes (elementos) e os eventos, algo que vou falar mais abaixo. Vou mostrar os métodos mais usados e pra quê eles servem também. Lembrando que existem vários, para todos os tipos e você pode ver todos <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">aqui</a>.</p>
+
+<h3 id="getelementbyid">getElementById()</h3>
+
+<p>Esse método retorna o elemento que estiver contendo o nome do ID passado. Como os IDs devem ser únicos, é um método muito útil para pegar apenas o elemento desejado.</p>
+
+<pre><code>  var myStart = document.getElementsById('start');
+</code></pre>
+
+<p><strong>myStart</strong>: elemento específico que se equipara com o seletor passado.</p>
+
+<p><strong>start</strong>: seletor passado, caso não houvesse nenhum ele retornaria <em>null</em>.</p>
+
+<h3 id="getelementsbyclassname">getElementsByClassName()</h3>
+
+<p>Esse método retorna um <em>HTMLCollection</em> de todos elementos que estiverem contendo o nome da classe passada.</p>
+
+<pre><code>  var myContainer = document.getElementsByClassName('container');
+</code></pre>
+
+<p><strong>myContainer</strong>: elemento específico que se equipara com o seletor passado.</p>
+
+<p><strong>.container</strong>: seletor passado, caso não houvesse nenhum ele retornaria <em>null</em>.</p>
+
+<h3 id="getelementsbytagname">getElementsByTagName()</h3>
+
+<p>Na mesma maneira do método acima, ele também retorna uma <em>HTMLCollection</em> mas com uma diferença: esse método retorna todos elementos contendo a tag name passada.</p>
+
+<pre><code>  var buttons = document.getElementsByTagName('button');
+</code></pre>
+
+<p><strong>buttons</strong>: elemento específico que se equipara com o seletor passado.</p>
+
+<p><strong>button</strong>: tag name passada.</p>
+
+<h3 id="queryselector">querySelector()</h3>
+
+<p>Retorna o primeiro elemento que se equipara ao seletor CSS passado. Lembrando que o seletor deve seguir a sintaxe CSS. Caso não tenha nenhum seletor, ele retornará <em>null. </em></p>
+
+<pre><code>  var resetButton = document.querySelector('#reset');
+</code></pre>
+
+<p><strong>resetButton</strong>: primeiro elemento que se equipara com o seletor passado. </p>
+
+<p><strong>#reset</strong>: seletor passado, caso não houvesse nenhum ele retornaria <em>null</em>.</p>
+
+<h3 id="queryselectorall">querySelectorAll()</h3>
+
+<p>Muito igual ao querySelector(), mas ele tem apenas uma diferença: retorna todos elementos que se equiparam ao seletor CSS passado. O seletor também deve seguir a sintaxe CSS, caso não haja nenhum ele retornará <em>null</em>.</p>
+
+<pre><code>  var myButtons = document.querySelector('#buttons');
+</code></pre>
+
+<p><strong>myButtons</strong>: elementos que se equiparam com o seletor passado.</p>
+
+<p><strong>#buttons</strong>: seletor passado, como nesse caso não há nenhum seletor com esse nome, ele retorna <em>null</em>.</p>
+
+<p>Esses são apenas 3 métodos do DOM, existem vários e alguns são bastante usados, por exemplo o <em>createElement()</em> que cria um novo elemento HTML usando o nome da da tag a ser criada, o setAttribute() que você pode setar novos atributos para elementos HTML e muitos outros.</p>
+
+<p>Você pode encontrar todos <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">AQUI</a> indo no canto esquerdo em _Methods_ . Recomendo fortemente que você veja alguns, porque há muitos métodos interessantes sem que nós nem saibamos da existência e que talvez um dia você precise usar.</p>
+
+<p>Agora vamos falar um pouco sobre eventos, afinal sem eles não conseguimos criar interatividade nas nossas páginas.</p>
+
+<h3 id="events">Events</h3>
+
+<p>Os elementos DOM além de possuirem métodos também possuem eventos. São eles que fazem a interatividades dos elementos no documento, mas não se engane: eventos também são métodos.</p>
+
+<h3 id="click">click</h3>
+
+<p>Um dos mais usados é o click, quando o usuário clicar no elemento, ele realizará alguma ação.</p>
+
+<pre><code>  myStart.addEventListener('click', function(event) {
+
+    // Faça algo aqui.
+
+  }, false);
+</code></pre>
+
+<p>Os parâmetros do <strong>addEventListener()</strong> são:</p>
+
+<ol>
+<li>O tipo de evento que você deseja (nesse exemplo eu usei o <em>‘click’</em>).</li>
+<li>A função de callback</li>
+<li>O <em>useCapture</em> faz o evento se atrelar ao pai até chegar ao filho. Ele por padrão é <em>false</em>, mas caso você coloque-o como <em>true</em>, ele vai fazer o caminho contrário atrelando o elemento. Você quase sempre vai usá-lo como <em>false</em>.</li>
+</ol>
+
+<h3 id="select">select</h3>
+
+<p>Esse evento serve para quando você quiser disparar algo quando o elemento for selecionado. Nesse caso apenas disparamos um simples <em>alert</em>.</p>
+
+<pre><code>  myStart.addEventListener('select', function(event) {
+
+     alert('Elemento selecionado!');
+
+  }, false);
+</code></pre>
+
+<p>Esses são uns dos mais usados, temos outros vários eventos que você pode usar, por exemplo, eventos de <em>drag &amp; drop</em>, quando o usuário começar a arrastar um elemento você pode realizar uma ação, e quando ele soltá-lo você pode realizar outra.</p>
+
+<h3 id="percorrer-elementos">Percorrer elementos</h3>
+
+<p>Você consegue percorrer elementos pelo DOM, usando algumas propriedades que vamos ver agora. É possível retornar com elas: elementos, comentários, textos.</p>
+
+<h3 id="childnodes">.childNodes</h3>
+
+<p>Essa propriedade retorna uma <em>nodeList</em> de filhos do elemento passado. Ela vai retornar textos, comentários e quebras de linhas também. Portanto muito cuidado ao usá-la</p>
+
+<pre><code>  var container = document.querySelector('.container');
+
+  var getContainerChilds = container.childNodes;
+</code></pre>
+
+<h3 id="firstchild">.firstChild</h3>
+
+<p>Essa propriedade retorna o primeiro filho do elemento passado.</p>
+
+<pre><code>  var container = document.querySelector('.container');
+
+  var getFirstChild = container.firstChild;
+</code></pre>
+
+<h3 id="nodename">.nodeName</h3>
+
+<p>Essa propriedade retorna o name do elemento passado. Como no caso passamos uma div, ele irá nos retornar “_div_”.</p>
+
+<pre><code>  var container = document.querySelector('.container');
+
+  var getName = container.nodeName;
+</code></pre>
+
+<h3 id="nodevalue">.nodeValue</h3>
+
+<p>Específico para textos e comentários, ele retorna o conteúdo do nó de texto ou comentário. Como passamos ele para uma <em>div</em>, ele irá nos retornar <em>null</em>.</p>
+
+<pre><code>  var container = document.querySelector('.container')
+
+  var getValue = container.nodeValue;
+</code></pre>
+
+<h3 id="nodetype">.nodeType</h3>
+
+<p>Essa propriedade nos retorna o tipo do elemento passado. Nesse caso ele retornaria ‘<em>1</em>&rsquo;.</p>
+
+<pre><code>  var container = document.querySelector('.container')
+
+  var getValue = container.nodeType;
+</code></pre>
+
+<p>Mas o que significa esse ‘_1_’? Ele simplesmente é o <em>nodeType</em> do elemento, no caso ele é um _ELEMENT_NODE _e retorna null, caso fosse um atributo por exemplo ele era um nodeType ‘2’ e retornaria o valor do atributo.</p>
+
+<p><img src="https://i.imgur.com/HH2XHS5.png" alt="" /></p>
+
+<p>Tabela que mostra os nodeTypes, os names que eles retornam e seus valores.</p>
+
+<p>Você pode ler mais sobre nodeTypes <a href="https://www.w3schools.com/jsref/prop_node_nodetype.asp">aqui</a>. </p>
+
+<h3 id="elements">Elements</h3>
+
+<p>Essas propriedades, ao contrários das outras acima retornam somente elementos. São mais recomendadas pois podem causar menos confusão e são mais simples de serem entendidas.</p>
+
+<h3 id="parentnode">.parentNode</h3>
+
+<p>Essa propriedade retorna o parente do nó passado.</p>
+
+<pre><code>  var container = document.querySelector('.container')
+
+  var getParent = container.parentNode;
+</code></pre>
+
+<h3 id="firstelementchild">.firstElementChild</h3>
+
+<p>Essa propriedade retorna o primeiro elemento-filho do elemento especificado.</p>
+
+<pre><code>  var container = document.querySelector('.container')
+
+  var getValue = container.firstElementChild;
+</code></pre>
+
+<h3 id="lastelementchild">.lastElementChild</h3>
+
+<p>Semelhante a propriedade anterior, mas essa retorna o último elemento-filho do elemento especificado.</p>
+
+<pre><code>  var container = document.querySelector('.container')
+
+  var getValue = container.lastElementChild;
+</code></pre>
+
+<p>Essas são apenas alguma das propriedades do DOM, existem várias outras. É muito importante você entender ao menos o básico de como o DOM funciona, seus métodos e propriedades pois cada aplicação pede algo diferente e, nunca se sabe quando você vai usar aquele método ou propriedade.</p>
+
+<h3 id="conclusão">Conclusão</h3>
+
+<p>O DOM nos proporciona várias API’s importantes para a criação de aplicações fantásticas e cada vez mais inovadoras, entendendo o básico dele você já consegue fazer coisas incríveis. Caso você queira ler mais sobre eventos e saber quais existem, você pode clicar <a href="https://developer.mozilla.org/en-US/docs/Web/Events">aqui</a> e ler toda referência da MDN.</p>
+
+<h3 id="você-se-interessou-por-dom-e-quer-ler-mais">Você se interessou por DOM e quer ler mais?</h3>
+
+<p><a href="https://www.guru99.com/understanding-dom-fool-guide.html">Understanding DOM: A Fool’s Guide</a> (Artigo)</p>
+
+<p><a href="http://shop.oreilly.com/product/0636920027690.do">DOM Enlightment</a> (Book by Cody Lindley)</p>
+
+<p>Gostou? Como esse é meu primeiro artigo, deixa seu like, me segue no <a href="https://twitter.com/leonardomso"><strong>Twitter</strong></a> e deixa um comentário como feedback que isso é muito importante! ✌</p>
+
+    </article>
+
+  
+    
+    
+    <div class="tb-related-posts">
+
+     
+      <h3>Leia mais aqui no Tableless:</h3>
+      <ul>
+        
+        <li><a href="/paginas_acessiveis_hatemile/?utm_source=tablelessRelatedLink" class="tb-related-post">Páginas acessíveis com o HaTeMiLe</a></li>
+        
+        <li><a href="/carrocel-descomplicado-com-html-css/?utm_source=tablelessRelatedLink" class="tb-related-post">Carrossel descomplicado com HTML, CSS</a></li>
+        
+        <li><a href="/aplicativos-desktop-com-nw-js-node-webkit-introducao/?utm_source=tablelessRelatedLink" class="tb-related-post">Aplicativos Desktop com NW.js – Node Webkit – Introdução</a></li>
+        
+        <li><a href="/processo-front-end-na-locaweb/?utm_source=tablelessRelatedLink" class="tb-related-post">Processo front-end na Locaweb</a></li>
+        
+        <li><a href="/desenvolvendo-apps-para-smarttvs-com-html-css-e-ajax/?utm_source=tablelessRelatedLink" class="tb-related-post">Desenvolvendo apps para SmartTVs com HTML, CSS e Ajax</a></li>
+        
+      </ul>
+    
+
+    </div>
+
+    <div class="tb-banner-article">
+      <script class='__lxGc__' type='text/javascript'>
+      ((__lxGc__=window.__lxGc__||{'s':{},'b':0})['s']['_210746']=__lxGc__['s']['_210746']||{'b':{}})['b']['_609152']={'i':__lxGc__.b++};
+      </script>
+    </div>
+
+    <div class="tb-comments">
+  <div id="disqus_thread"></div>
+
+  <script>    
+      
+
+      var disqus_config = function () {
+        this.page.url = "https://tableless.com.br/entendendo-o-dom-document-object-model/";  
+        this.page.identifier = ""; 
+      };
+      (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://tableless.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+  </section>
+
+  
+
+
+</div>
+
+
+
+<footer>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

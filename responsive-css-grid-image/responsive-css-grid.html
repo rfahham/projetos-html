@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>responsive-css-grid</title>
+	<style type="text/css">
+
+    * {
+padding:0;
+margin:0;
+vertical-align:baseline;
+list-style:none;
+border:0
+}
+
+
+body {
+  padding: 20px;
+  font-family: Helvetica;
+  background-color: #20262e;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-gap: 10px;
+  list-style-type: none;
+}
+
+li {
+  
+  border-radius: 3px;
+  padding: 20px;
+  
+}
+
+.info, p {
+  text-align: center;
+  font-size: 13px;
+  padding-top: 20px;
+  color: #fff;
+}
+
+img {
+  width: 140px;
+  height: 140px;
+}
+
+#img_circular {
+  border-radius: 200px
+}
+	</style>
+</head>
+<body>
+	<ul>
+  <li><img id="img_circular" src="avatar-border-radius.png"><p>Fulana</p></li>
+  <li><img id="img_circular" src="avatar-border-radius.png"><p>Fulana</p></li>
+  <li><img id="img_circular" src="avatar-border-radius.png"><p>Fulana</p></li>
+  <li><img id="img_circular" src="avatar-border-radius.png"><p>Fulana</p></li>
+  <li><img id="img_circular" src="avatar-border-radius.png"><p>Fulana</p></li>
+  <li><img id="img_circular" src="avatar-border-radius.png"><p>Fulana</p></li>
+</ul>
+
+<div class="info">Resize this panel to see grids respond</div>
+
+</body></html>

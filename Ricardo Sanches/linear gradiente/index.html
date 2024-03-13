@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>linear gradient</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.container {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-row-gap: 20px;
+		grid-column-gap: 20px;
+		grid-template-areas: 
+			"top-left top-right"
+			"bottom-left bottom-right";
+		width: 100%;
+		height: 100vh;
+	}
+
+	.item01 {
+		grid-area: top-left;
+		align-self: stretch;
+		background-image: linear-gradient(
+			to right,
+			red, blue
+			);
+	}
+
+	.item02 {
+		grid-area: top-right;
+		align-self: stretch;
+		background-image: linear-gradient(
+			to top right,
+			red, blue
+			);
+	}
+
+	.item03 {
+		grid-area: bottom-left;
+		align-self: stretch;
+		background-image: linear-gradient(
+			15deg,
+			green, yellow, red
+			);
+	}
+
+	.item04 {
+		grid-area: bottom-right;
+		align-self: stretch;
+		background: 
+			linear-gradient(
+				to bottom,
+				rgba(0,0,0,0),
+				rgba(0,0,0,0.8)
+				),
+		transparent url('natureza.jpg') no-repeat left bottom;
+		background-position: center;
+		background-size: cover;
+	}
+
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item01"></div>
+		<div class="item02"></div>
+		<div class="item03"></div>
+		<div class="item04"></div>
+	</div>
+</body>
+</html>
+
+

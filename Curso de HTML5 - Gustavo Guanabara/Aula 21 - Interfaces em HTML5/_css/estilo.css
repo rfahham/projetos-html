@@ -1,0 +1,280 @@
+@charset="utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+
+@font-face { /*Usando uma fonte diferente do meu computador*/
+	font-family: 'fontelogo'; /* fonte logo é uma variável, adicionar no lugar da fonte*/
+	src: url("../_fonts/bubblegum-sans-regular.otf"); /*nome do arquivo de fonte*/
+}
+
+/* FORMATAÇÃO DA COR DO FUNDO DA PÁGINA*/
+
+body { 
+	background-color: #dddddd;
+	font-family: Verdana, sans-serif;
+	color: #606060;
+
+	}
+
+				/* nome do arquivo de imagem, deve estar na mesma pasta do index.html */
+ 				/*background-color: #dddddd; /* Cor do fundo em hexadecimal - modelo antiga*/
+ 				/* background-color: rgb(35 137 195); /* Cor do fundo em RGB - modelo atual*/
+ 				/*background-image: url("http://img.ibxk.com.br/2014/08/29/29133040763371.jpg");
+				/* color: rgb(0,0,0); /* cor da fonte em RGB 0,0,0 = preto */
+				/*color: rgba(0,0,0,1); /* Canal Alfa Transparencia varia de 0 a 1 */	
+				/* color: rgba(0,0,0,0.1); /* 10% - Canal Alfa Transparencia */
+				/* color: rgba(0,0,0,0.5); /* 50% - Canal Alfa Transparencia */
+				/* background-color: hsl(165,81%,93%); Usando matis, saturação e luminosidade */
+				/* background-color: hsla(165,81%,93%, 0.5); /* Usando matis, saturação e luminosidade e o canal alfa*/
+
+
+/* FORMATAÇÃO DOS PARÁGRAFOS */					
+p {
+	text-align: justify;
+	text-indent: 50px;
+}
+
+
+
+a {
+	color: #606060;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6); /*Deixa a fonte com um sombreado*/
+}
+
+/* CONFIGURAÇÃO DA PÁGINA BRANCA*/
+
+div#interface { 
+	width: 1000px;
+	background-color: #ffffff;
+	margin: -20px auto 10px auto; /* de cima, direita, de baixo, esquerda*/
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* borda com sombreamento*/
+	padding: 20px; /* largura das margens internas*/
+}
+
+figure.foto-legenda{
+	position: relative;
+	border: 8px solid white; /* uma borda com 8px de largura, solida e da cor vermelha*/
+	box-shadow: 1px 1px 4px black; /* borda com sombra */
+			}
+
+figure.foto-legenda img { 
+	width: 100%;
+	height: 100%;
+			}
+
+figure.foto-legenda figcaption{
+	opacity: 0;
+	position: absolute; /* posição absoluta da legenda - tem que definir a posição relativa em figure foto-legenda*/
+	top: 0px; /* posição 0*/
+	background-color: rgba(0,0,0,0.4); /* cor do fundo da legenda*/
+	color: white; /* cor da fonte*/
+	width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption{
+	opacity:1;
+}
+
+header#cabecalho img#icone{ 
+	position: absolute;
+	left: 970px; 
+	top: 70px;
+}
+
+header#cabecalho {
+	border-bottom: 1px #606060 solid;
+	height: 150px;
+	background: url("../_imagens/glass-logo-peq.jpg")no-repeat 0px 80px;
+}
+
+header#cabecalho h1{
+	font-family: 'fontelogo', sans-serif;/* Tipo de fonte de h1, fontelogo é uma fonte local*/
+	font-size: 30px;/* Tamanho da fonte*/
+	color: #606060;/* Cor da fonte*/
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6); /*Deixa a fonte com um sombreado*/
+	padding: 0px;
+	margin-bottom: 0px;/*usado para diminuir a margem inferior de h1*/
+}
+
+header#cabecalho h2{
+	font-family: 'Titillium Web', sans-serif;/* Tipo de fonte de h2*/
+	font-size: 30px;/* Tamanho da fonte*/
+	color: #888888;/* Cor da fonte*/
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6); /*Deixa a fonte com um sombreado*/
+	padding: 0px;
+	margin-top: 0px; /*usado para diminuir a margem superior de h2*/
+}
+
+
+/* FORMATAÇÃO DO MENU */
+
+nav#menu {
+	display: block;
+
+}
+
+nav#menu ul{ /* Configuração do MENU */
+	list-style: none; /* remove os marcadores das listas ul ou ol*/
+	text-transform: uppercase; /* transforma o texto ex caixa alta*/
+	position: absolute; /* tem que explicaar o que é a posição relativa*/
+	top: -20px;
+	left: 500px;
+}
+
+nav#menu li{
+	display: inline-block; /*  Coloca os itens da lista um do lado do outro*/
+	background-color: #dddddd; /* cor do fundo do menu */ 
+	padding: 10px;
+	margin: 2px; /* espaço entre as palavras do menu */
+	transition: background-color 1s; /* efeito aparece com 1 segundo depois que o mouse é posicionado */
+}
+
+nav#menu li:hover {
+	background-color: #606060; /* Deixa a parte selecionada com a cor cinza */
+}
+
+nav#menu h1 {
+	display: none;
+}
+
+nav#menu a { /*  a = âncora  */
+	color: #000000; /* cor da palavra do menu*/
+	text-decoration: none;
+}
+
+nav#menu a:hover { /* muda a cor da palavra do menu de preto para branco*/
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+section#corpo{
+	display: block;
+	width: 550px;
+	float: left;
+	border-right: 1px solid #606060;
+	padding-right: 15px;
+}
+
+/* BARRA DA NOTICIA PRINCIPAL */
+
+article#noticia-principal h2{
+	font-size: 13pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5px 10px;
+	margin: 10px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+/* FORMATAÇÃO DOS CABEÇALHOS */
+
+header#cabecalho-artigo h1{
+	font-family: 'fontelogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-bottom: 0px;
+}
+
+.direita {
+	text-align: right;
+}
+
+header#cabecalho-artigo h2{
+	font-size: 13pt;
+	color: #cecece;
+	background-color: #ffffff;
+	margin: 0px;
+}
+
+header#cabecalho-artigo h3{
+	font-size: 12px;
+	color: #606060;
+}
+
+/* Formatação da tabela */
+
+table#tabelaspec{
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table#tabelaspec td{
+	border: 1px solid #606060;
+	padding: 10px;
+	text-align: center;
+}
+
+table#tabelaspec td.ce{
+	color: #ffffff;
+	background-color: #606060; 
+}
+
+table#tabelaspec td.cd{
+	background-color: #cecece; 
+}
+
+table#tabelaspec caption{
+	color: #888888;
+	font-size: 13;
+	font-weight: bolder;
+}
+
+table#tabelaspec caption span{
+	display: block;
+	float: right;
+	color: #000000;
+	font-size: 8pt;
+	margin-top: 10px;
+}
+
+/* Formatação da barra da direita */
+
+aside#lateral{
+	display: block;
+	width: 410px;
+	float: right;
+	background-color: #dddddd;
+	padding: 10px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+aside#lateral h1{
+	font-family: "fontelogo", sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-top: 0px; 
+}
+
+aside#lateral h2{
+	background-color: #606060;
+	font-size: 13pt;
+	color: #ffffff;
+	padding: 5px; 
+}
+
+/* Formatação do rodapé */
+
+footer#rodape{
+	clear: both;
+	border-top: 1px solid #606060;
+}
+
+footer#rodape p{
+	text-align: center;
+}
+
+
+/*OBS.: Criar no arquivo index.html um link chamando o arquivo .css dentro da tag head:
+
+<link rel="stylesheet" type="text/css" href="nome do arquivo .css"/>
+
+/*  comentários do css*/
+ 

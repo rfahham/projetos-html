@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<title>Collaborative Web Development</title>
+</head>
+<body>
+	<div class="container">
+		<img class="img-fluid" src="ebook.png">
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Índice</h2>
+			<ul>
+				<li><a href="#prefacio">Prefácio</a> </li>
+				<li><a href="#introducao">Introdução</a></li>
+				<li style="list-style: none; display: inline">
+					<ul>
+						<li>Nossa Responsabilidade</li>
+					</ul>
+				</li>
+				<li><a href="#qualidadedocodigo">Qualidade do código</a> </li>
+				<li style="list-style: none; display: inline">
+					<ul>
+						<li>Padrões de Código</li>
+						<li>Controle de Versão</li>
+						<li>Testando</li>
+						<li>Automatização</li>
+						<li>Pair Programming</li>
+						<li>Revisão do código</li>
+						<li>Leitura Adicional</li>
+					</ul>
+				</li>
+				<li><a href="#opensource">Open Source</a></li>
+				<li style="list-style: none; display: inline">
+					<ul>
+						<li>Sendo um mantenedor de código aberto</li>
+						<li>Contributing to Someone Else’s Project</li>
+						<li>Leitura Adicional</li>
+					</ul>
+				</li>
+				<li><a href="#documentacao">Documentação</a> </li>
+				<li style="list-style: none; display: inline">
+					<ul>
+						<li>As oito regras de boa documentação</li>
+						<li>A importânccia do README</li>
+						<li>Documentação do projeto</li>
+						<li>Quando os desenvolvedores são seus clientes</li>
+						<li>Resumindo</li>
+						<li>Leitura Adicional</li>
+					</ul>
+				</li>
+				<li> <a href="#tratar">Tratar outros desenvolvedores com respeito</a> </li>
+				<li style="list-style: none; display: inline">
+					<ul>
+						<li>Viés inconsciente</li>
+						<li>Criando Ambientes de Acolhimento</li>
+						<li>Leitura Adicional</li>
+					</ul>
+				</li>
+				<li><a href="#conclusao">Conclusão</a> </li>
+			</ul>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2 id="prefacio">Prefácio</h2>
+			<p>Como desenvolvedores da web, somos responsáveis por moldar as experiências das vidas on-line dos usuários. Ao fazer escolhas éticas e centradas no usuário, criamos uma web melhor para todos. A série Ethical Web Development visa dar uma olhada nas questões éticas do desenvolvimento web.</p>
+			<p>Com isso em mente, tentei dividir as questões éticas do desenvolvimento da Web em quatro princípios fundamentais:</p>
+			<ol>
+				<li>As aplicações da Web devem funcionar para todos.</li>
+				<li>As aplicações da Web devem funcionar em todos os lugares.</li>
+				<li>Os aplicativos da Web devem respeitar a privacidade e a segurança de um usuário.</li>
+				<li>Os desenvolvedores da Web devem ser atentos aos seus pares.</li>
+			</ol>
+			<p>Os três primeiros são todos sobre a tomada de decisões éticas para os usuários de nossos sites e aplicativos. Quando criamos aplicativos da web, estamos tomando decisões para outras pessoas, muitas vezes inconscientemente, para esses usuários.</p>
+			<p>O quarto princípio diz respeito a como interagimos com os outros em nosso setor. Embora a mídia freqüentemente apresente a imagem de um hacker solitário trabalhando duro em um porão escuro e empoeirado, o trabalho que fazemos é bastante social e depende de uma vasta rede dependente do trabalho de outros.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>O que é ética?</h2>
+			<p>Se vamos discutir a ética do desenvolvimento web, primeiro precisamos estabelecer um entendimento comum de como aplicamos o termo ética. O estudo da ética divide-se em quatro categorias:</p>
+			<ul>
+				<li>Meta-ética</li>
+				<li style="list-style: none; display: inline">
+					<ul>
+						<li>Uma tentativa de entender as questões subjacentes de ética e moralidade</li>
+					</ul>
+				</li>
+				<li>Ética descritiva</li>
+				<li style="list-style: none; display: inline">
+					<ul>
+						<li>O estudo e a pesquisa das crenças das pessoas</li>
+					</ul>
+				</li>
+				<li>Ética normativa</li>
+				<li style="list-style: none; display: inline">
+					<ul>
+						<li>O estudo da ação ética e criação de padrões de certo e errado</li>
+					</ul>
+				</li>
+				<li>Ética aplicada</li>
+				<li style="list-style: none; display: inline">
+					<ul>
+						<li>A análise de questões éticas, como ética nos negócios, ética ambiental e moralidade social</li>
+					</ul>
+				</li>
+			</ul>
+			<p>Para nossos propósitos, faremos o melhor possível para determinar um conjunto normativo de padrões éticos aplicados ao desenvolvimento da Web e, em seguida, adotar uma abordagem ética aplicada.</p>
+			<p>Dentro da teoria ética normativa, há a ideia de consequencialismo, que argumenta que o valor ético de uma ação é baseado em seu resultado. Em suma, as conseqüências de fazer algo se tornam o padrão de certo ou errado. Uma forma de consequencialismo, o utilitarismo, afirma que uma ação é correta se levar ao máximo de felicidade, ou bem-estar, para o maior número de pessoas. Essa abordagem utilitarista é a estrutura que escolhi usar quando exploramos a ética do desenvolvimento da web.</p>
+			<p>Ufa! Nós caímos em um buraco profundo e escuro de terminologia filosófica, mas acho que tudo se resume a isso:</p>
+			<ul>
+				<li>Faça escolhas que tenham o efeito mais positivo para o maior número de pessoas.</li>
+			</ul>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Éticas profissionais</h2>
+			<p>Muitas profissões têm uma expectativa padrão de comportamento. Estes podem ser legalmente exigidos ou uma norma social, mas geralmente tomam a forma de um código de ética que detalha convenções, padrões e expectativas daqueles que praticam a profissão. A ideia de um código de ética profissional pode ser rastreada até o juramento de Hipócrates, que foi escrito para profissionais médicos durante o quinto século aC (veja a Figura P-1). Hoje, as faculdades de medicina continuam administrando o Hipocrisia ou um juramento profissional semelhante.</p><img src="">
+			<p>Figure P-1. Um fragmento do juramento de Hipócrates do terceiro século (image courtesy of Wikimedia Commons)</p>
+			<p>No livro <a href="http://bit.ly/think_engineer">Thinking Like an Engineer</a> (Princeton University Press), Michael Davis diz que um código de conduta para profissionais</p>
+			<p>[p] descreve como os profissionais devem perseguir seu ideal comum de modo que cada um possa fazer o melhor possível a um custo mínimo para si mesma e para aqueles com quem se preocupa ... O código é proteger cada profissional de certas pressões (por exemplo, a pressão para cortar custos para economizar dinheiro) tornando razoavelmente provável (e mais provável do que qualquer outra coisa) que a maioria dos outros membros da profissão não aproveite sua boa conduta. Um código é uma solução para um problema de coordenação.</p>
+			<p>Minha esperança é que este relatório ajude a inspirar um código de ética para desenvolvedores web, orientando nosso trabalho de maneira profissional e inclusiva.</p>
+			<p>As abordagens que expus são apenas a minha visão de como o desenvolvimento da Web pode proporcionar a maior felicidade para o maior número de pessoas. Essas abordagens provavelmente evoluirão à medida que a tecnologia mudar e podem ser únicas para muitas situações de desenvolvimento. Eu o convido a ler minha aplicação prática dessas idéias e espero que você as aplique de alguma forma ao seu próprio trabalho.</p>
+			<p>Esta série é um trabalho em andamento e convido você a contribuir. Para saber mais, visite o site <a href="https://ethicalweb.org/">Ethical Web Development</a>.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Público Alvo</h2>
+			<p>Este título, assim como outros da série Ethical Web Development, destina-se a tomadores de decisões da equipe de desenvolvedores da web e de desenvolvimento da Web interessados em explorar os limites éticos do desenvolvimento da web. Assumo uma compreensão básica dos tópicos fundamentais de desenvolvimento da Web, como HTML, CSS, JavaScript e HTTP. Apesar dessa suposição, fiz o melhor que pude para descrever esses tópicos de maneira acessível e compreensível.</p>
+		</div>
+		<h1>Capítulo 1</h1>
+		<h2 id="introducao">Introdução</h2>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<p>Eu aprendi a ser um desenvolvedor web trabalhando sozinho. Tudo começou quando eu era um estudante do ensino médio em meados da década de 1990 e tive a idéia de um website. Passei muito tempo livre, em um quarto de hóspedes na casa dos meus pais, copiei e colei trechos de código HTML que encontrei clicando em Exibir → Origem no meu navegador da web. Na faculdade, me especializei em multimídia, o que exigiu duas aulas de programação. Eu participei das aulas, trabalhando nos projetos necessários sozinho no meu dormitório. Depois da faculdade, fiz uma pausa na Web para administrar uma livraria e passar o tempo ensinando, mas, alguns anos depois, meu amor pelo desenvolvimento da Web foi reavivado. Quando isso aconteceu, eu entrei novamente no mundo do desenvolvimento por meio de aprendizado independente com livros e tutoriais, eventualmente fazendo contratações independentes. Não foi até vários anos da minha carreira que me associei a outro desenvolvedor em um projeto.</p>
+			<p>Agora, minha experiência de solidão pode ser um pouco extrema, mas imagino que muitos de vocês lendo isso também tenham começado a trabalhar sozinhos. Em geral, o desenvolvimento é aprendido primeiro como uma atividade profunda e independente, mas na força de trabalho é um empreendimento altamente social. Como desenvolvedores web profissionais, frequentemente nos associamos a outros desenvolvedores para construir sistemas complexos. Para fazer isso, analisamos e criticamos o código um do outro, chegamos a entendimentos comuns, fazemos promessas, escrevemos documentação e interagimos com o código aberto de maneiras que não conseguimos fazer como aprendizes solitários.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Nossa responsabilidade</h2>
+			<p>A intenção deste título é fornecer orientações sobre como os desenvolvedores da Web podem trabalhar melhor juntos. Os quatro tópicos que vamos explorar são:</p>
+			<ul>
+				<li>Escrevendo código de qualidade</li>
+				<li>Contribuindo para o código aberto</li>
+				<li>Melhorando nossas práticas de documentação</li>
+				<li>Reconhecer a necessidade de inclusão e respeito colegial</li>
+			</ul>
+			<p>Se definirmos a ética como “fazer escolhas que tenham o efeito mais positivo para o maior número de pessoas”, colocar ênfase na colaboração positiva é fundamental. Práticas de desenvolvimento empático levam à criação de produtos empáticos.</p>
+		</div>
+		<h1>Capítulo 2</h1>
+		<h2 id="qualidadedocodigo">Qualidade do Código</h2>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<p>Você não é sua ideia, e se você se identifica muito de perto com suas idéias, você vai se envolver quando elas forem desafiadas. — Ed Catmull, Pixar cofounder and author of Creativity Inc.</p>
+			<p>No livro De falar sobre o amor: Uma jornada até o fim do paladar, o jornalista especializado em música Carl Wilson reflete sobre o que significa para algo ser bom. O livro centra-se no álbum Celine Dion que leva o nome, que vendeu 31 milhões de cópias e é um dos álbuns mais vendidos de todos os tempos. Apesar desse imenso sucesso, críticos de música como Wilson (e provavelmente muitos de nós lendo isso, incluindo o autor), são rápidos em dispensar a música de Celine Dion. O motivo dessa disparidade é que o gosto é subjetivo. Cada um de nós traz consigo experiências culturais únicas quando gostamos (ou não) de entretenimento e arte. O filósofo do século XVIII David Hume explorou essas idéias em detalhes, mais notavelmente em seu ensaio “Do Padrão do Gosto”, afirmando que “a beleza não é qualidade nas próprias coisas: existe apenas na mente que as contempla. "</p>
+			<p>Se coisas como a dignidade da arte e do entretenimento são subjetivas, e quanto à qualidade do código? O bom código é subjetivo ou objetivo? Este pode ser um tema desafiador, assim como a música, todos nós trazemos nossa própria experiência e suposições para a discussão sobre o que é um código “belo”. Com isso em mente, procurei identificar algumas medidas de objeto da qualidade do código. Isso nos permite eliminar o risco de debates desnecessários ou até insalubres que o gosto subjetivo introduz no processo de desenvolvimento. Em vez disso, ao seguir essas diretrizes, as discussões podem se concentrar nos resultados e em um conjunto compartilhado de princípios.</p>
+			<p>Good code does the following:</p>
+			<ul>
+				<li>Segue um conjunto de padrões</li>
+				<li>Usa o controle de versão</li>
+				<li>Está bem testado</li>
+				<li>Utiliza verificações automatizadas</li>
+			</ul>
+			<p>Além disso, como o código é geralmente escrito em um ambiente colaborativo ou de equipe, podemos aproveitar os processos de revisão de código e programação em pares. Em última análise, o código destina-se a ser executado por máquinas, mas lido por humanos. Quando escrevemos códigos que seguem essas diretrizes, criamos uma base de código que é colaborativa, compreensível e que pode ser alterada com segurança sem conseqüências não intencionais.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Padrões de Código</h2>
+			<p>Todo código em qualquer base de código deve parecer com uma única pessoa digitando, não importa quantas pessoas contribuíram. —Rick Waldron, autor de <a href="https://github.com/rwaldron/idiomatic.js">idiomático.js</a></p>
+			<p>Talvez uma das coisas mais diretas que podemos fazer para melhorar nossa qualidade de código seja seguir um conjunto de padrões. Os padrões são úteis quando se trabalha com uma equipe, pois estabelecem expectativas claras para todos os membros da equipe e minimizam os debates sobre sintaxe nas revisões de código. Seguir os padrões cria um código que é mais fácil de ler e entender, pois não há uma mistura de estilos em toda a base de código.</p>
+			<p>Ao criar um guia de estilo para uma organização, recomendo tratá-lo como código e armazenar os guias no controle de versão. Isso permite contribuições fáceis, um histórico pesquisável, a capacidade de abrir solicitações de solicitação e o rastreamento de problemas para alterações propostas. Para projetos individuais seguindo um padrão de código é útil também, pois pode nos ajudar a capturar erros de sintaxe e evitar os tipos de erros desleixados que podem ocorrer quando se trabalha sozinho.</p>
+			<p>Seguir um padrão não significa criar um documento do zero. Quase todos os idiomas têm vários guias de estilo disponíveis, desde pequenos projetos de código aberto até documentos oficiais criados por grandes organizações. Algumas linguagens, como Python, predominaram em um único padrão (PEP 8). Abaixo está uma lista de guias de estilo em vários idiomas populares. Isso está longe de ser completo, mas espero que isso lhe dê um ponto de partida. Eu tentei fornecer uma mistura de diretrizes comunitárias e corporativas sempre que possível.</p>
+			<p>Em suma, os padrões de sucesso seguem estas diretrizes:</p>
+			<ul>
+				<li>Alavancar as diretrizes da comunidade</li>
+				<li>Automatizar a conformidade</li>
+				<li>São armazenados no controle de versão</li>
+				<li>São fáceis de ler e seguir</li>
+			</ul>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Diretrizes de Padrões da Comunidade</h2>
+			<p>Muitas comunidades e empresas de desenvolvimento compartilharam abertamente padrões para o desenvolvimento da web. Ao escolher implementar padrões, geralmente faz sentido adaptar a técnica anterior e seguir as diretrizes existentes. Coletei alguns dos meus favoritos em vários idiomas.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Múltiplos idiomas</h2>
+			<ul>
+				<li>
+					<a href="https://github.com/google/styleguide">Guias de estilo do Google</a>
+				</li>
+				<li>
+					<a href="https://github.com/Khan/style-guides/blob/master/style/javascript.md">Guias de Estilo da Khan Academy</a>
+				</li>
+				<li>
+					<a href="https://github.com/thoughtbot/guides">Guias de Estilo Thoughtbot</a>
+				</li>
+			</ul>
+			<h2>JavaScript</h2>
+			<ul>
+				<li>
+					<a href="https://standardjs.com/">Estilo Padrão JavaScript</a>
+				</li>
+				<li>
+					<a href="https://github.com/airbnb/javascript">Guia de Estilo do Airbnb JavaScript</a>
+				</li>
+				<li>
+					<a href="https://github.com/bevacqua/js">Guia de Qualidade JavaScript</a>
+				</li>
+				<li>
+					<a href="https://github.com/rwaldron/idiomatic.js">Idiomatic.js</a>
+				</li>
+				<li>
+					<a href="https://github.com/felixge/node-style-guide">Guia de Estilo do Node</a>
+				</li>
+				<li>
+					<a href="http://javascript.crockford.com/code.html">Convenções do Código de Douglas Crockford</a>
+				</li>
+			</ul>
+			<h2>Python</h2>
+			<ul>
+				<li>
+					<a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>
+				</li>
+				<li>
+					<a href="https://github.com/amontalenti/elements-of-python-style">- Os elementos do estilo Python</a>
+				</li>
+				<li>
+					<a href="https://python-guide.readthedocs.io/en/latest/writing/style/">O Guia do Mochileiro para Python: Estilo de Código</a>
+				</li>
+			</ul>
+			<h2>Ruby</h2>
+			<ul>
+				<li>
+					<a href="https://github.com/bbatsov/ruby-style-guide">Guia de Estilo Ruby</a>
+				</li>
+				<li>
+					<a href="https://github.com/github/rubocop-github/blob/master/STYLEGUIDE.md">Guia de Estilo do Ruby do GitHub</a>
+				</li>
+				<li>
+					<a href="https://shopify.github.io/ruby-style-guide/">Guia de Estilo Ruby do Shopify</a>
+				</li>
+			</ul>
+			<h2>PHP</h2>
+			<ul>
+				<li>
+					<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/">Padrões PHP do WordPress</a>
+				</li>
+				<li>
+					<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md">Padrões FIG</a>
+				</li>
+				<li>
+					<a href="http://www.phptherightway.com/">PHP: o caminho certo</a>
+				</li>
+				<li>
+					<a href="https://www.codeigniter.com/user_guide/general/styleguide.html?highlight=style%20guide">Guia de Estilo do CodeIgniter</a>
+				</li>
+			</ul>
+			<h2>GO</h2>
+			<ul>
+				<li>
+					<a href="https://golang.org/doc/effective_go.html">GO eficaz</a>
+				</li>
+				<li>
+					<a href="https://github.com/golang/go/wiki/CodeReviewComments">Comentários de revisão de código</a>
+				</li>
+			</ul>
+			<h2>Java</h2>
+			<ul>
+				<li>
+					<a href="http://geosoft.no/development/javastyle.html">Diretrizes de estilo de programação Java</a>
+				</li>
+				<li>
+					<a href="https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md">Guia de Estilo Java do Twitter</a>
+				</li>
+				<li>
+					<a href="https://source.android.com/source/code-style.html">Estilo de código do Android para colaboradores</a>
+				</li>
+			</ul>
+			<h2>HTML and CSS standards</h2>
+			<ul>
+				<li>
+					<a href="http://codeguide.co/">Guia de códigos por @mdo</a>
+				</li>
+				<li>
+					<a href="https://github.com/Khan/style-guides/blob/master/style/css.md">Guia de Estilo CSS da Khan Academy</a>
+				</li>
+				<li>
+					<a href="http://primercss.io/guidelines/">Primer</a>
+				</li>
+				<li>
+					<a href="https://github.com/necolas/idiomatic-css">CSS idiomático</a>
+				</li>
+				<li>
+					<a href="https://github.com/airbnb/css">Guia de Estilo do Airbnb CSS + SASS</a>
+				</li>
+				<li>
+					<a href="https://github.com/bevacqua/css">CSS: as boas partes</a>
+				</li>
+			</ul>
+			<p>Se você trabalha para uma organização que não segue um conjunto de padrões, recomendo pesquisar vários padrões no idioma de sua escolha e apresentá-los aos seus colegas. Como equipe, você pode optar por seguir um único padrão ou pode preferir adaptar partes e peças de vários padrões ao próprio padrão de sua organização. Embora isso possa parecer tedioso e introduzir o debate, quando feito corretamente, pode ser um excelente exercício de formação de equipe e uma maneira de criar expectativas comuns.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Automatize Padrões de Conformidade</h2>
+			<p>Os padrões são tão úteis se forem colocados em prática. Introduzir um conjunto de padrões é um ótimo primeiro passo, mas, em seguida, devemos garantir que eles sejam seguidos. Rever manualmente o código para aceitação de padrões é um processo tedioso que o linting de código pode nos ajudar a evitar. Existem dois lugares em que o linting deve ocorrer: nossos editores de texto e em qualquer lugar onde a suíte de testes do aplicativo é executada.</p>
+			<p>Os editores de texto podem ser configurados para executar o linting inline em relação aos nossos padrões. A maioria dos editores de texto tem pacotes disponíveis para linting que podem ser configurados para um conjunto de padrões (ou são configurados automaticamente para um padrão específico). Isso nos permite ver os erros inline e corrigi-los rapidamente.</p>
+			<p>Mesmo que tenhamos como objetivo deixar nossos padrões em tempo real com nosso editor de texto, é possível perder alguma coisa. Com isso em mente, também devemos executar nossos linting em qualquer lugar em que o nosso conjunto de testes seja executado. Isso é particularmente útil em pipelines de construção (que serão discutidos posteriormente no capítulo). Isso fará com que nossos testes falhem quando os padrões não forem seguidos. Se isso é novo para você, pode parecer extremo, mas isso tem a vantagem de remover a necessidade de interação ou discussão humana de algo que possa ser medido subjetivamente.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Controle de versão</h2>
+			<p>No início da minha carreira de desenvolvimento web, eu estaria desenvolvendo um projeto em uma pasta na minha máquina e gostaria de testar algumas mudanças importantes. Para fazer isso, eu faria uma cópia da pasta com o nome “Project-EXPERIMENT”. No final de um projeto, muitas vezes acabei com uma dúzia dessas pastas, cada uma com versões ligeiramente diferentes do meu código. Funcionou bem quando eu estava trabalhando sozinho, mas assim que outro desenvolvedor estava envolvido, nós acabávamos enviando arquivos por e-mail ou enviando-os por FTP para um servidor, esperando que nossas alterações não negassem acidentalmente as alterações feitas umas pelas outras. Como você pode imaginar, essa era uma maneira menos que ideal de trabalhar e colaborar.</p>
+			<p>Usando o controle de versão, solta as rugas no processo acima. Notavelmente o controle de versão traz:</p>
+			<ul>
+				<li>Colaboração aprimorada e direta</li>
+				<li>Capacidade de reverter as mudanças</li>
+				<li>Capacidade de "ramificar" versões do projeto</li>
+				<li>Resolução de conflitos de código</li>
+			</ul>
+			<p>Se você é novo no controle de versão, recomendo usar o Git, que pode ser combinado com ferramentas de hospedagem de código aberto, como o <a href="https://github.com/">GitHub</a> ou o <a href="https://about.gitlab.com/">GitLab</a>. Existem muitos recursos excelentes para aprender o Git, entre eles:</p>
+			<ul>
+				<li>
+					<a href="https://try.github.io/">Experimente o Git</a>
+				</li>
+				<li>
+					<a href="https://github.com/jlord/git-it-electron">Git-It</a>
+				</li>
+				<li>
+					<a href="https://www.codecademy.com/learn/learn-git">Aprender Git com Codeacademy</a>
+				</li>
+			</ul>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Testando</h2>
+			<p>Escrever sobre o teste é como escrever sobre o uso do fio dental. Todos sabemos que devemos fazê-lo, mas, para muitos de nós, no final de um dia agitado, às vezes, é mais fácil ignorá-lo. "Vou escrever esses testes amanhã", dizemos a nós mesmos, apenas para abordar a próxima característica importante quando nos sentamos em nossa mesa na manhã seguinte. Ou, talvez, você ainda não tenha percebido o valor dos testes, em vez disso, pense "Posso ver que isso funciona - por que preciso executar testes?" Se uma dessas descrições parecer familiar, tudo bem. Eles certamente descrevem as perspectivas que tomei em diferentes pontos da minha carreira profissional. Minha esperança nesta seção é demonstrar o valor do teste quando analisamos dois tipos úteis de testes: testes unitários e testes funcionais / de navegador.</p>
+		</div>
+		<div class="alert alert-success" role="alert">
+			<h4 class="alert-heading">Tipos de teste cobertos</h4>
+			<p>Para o objetivo deste título, vamos nos concentrar no teste de unidade e no teste funcional. Além desses, existem outras formas de teste de software que valem a pena explorar para sua aplicação, como testes de desempenho (abrangendo coisas como testes de estresse, testes de escalabilidade, testes de carga), testes de segurança e testes de regressão.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Por que fazer testes em tudo?</h2>
+			<p>Esta é a grande questão: por que teste? Quando desenvolvemos sites e aplicativos, estamos executando o site localmente em nossa máquina e podemos vê-lo funcionando. Essa é uma forma de teste, mas como você pode ter encontrado, ela está incompleta, especialmente à medida que criamos sites que possuem recursos interativos e entrada do usuário. Quando escrevemos testes, podemos garantir com segurança que nosso código funciona da maneira pretendida e não quebra recursos pré-existentes.</p>
+			<h2>Testes Unitários</h2>
+			<p>A maneira mais direta de pensar em um teste de unidade é como uma forma de testar um aspecto muito pequeno do nosso código. Normalmente, isso seria testar se uma função ou método individual retorna o valor esperado. Considere o exemplo a seguir, escrito em JavaScript (o formato de teste é baseado na estrutura de teste <a href="https://mochajs.org/">Mocha</a> com a biblioteca de asserção <a href="http://www.chaijs.com/">Chai</a> ).</p>
+			<p>Gostaríamos de escrever uma função (chamada stayPositive) que sempre retornasse um número positivo quando passasse um valor. Vamos primeiro escrever nosso teste, que espera que um número positivo (2) seja igual a chamar nossa função e passar o valor 2.</p>
+	<pre>
+            it('should return a positive number when passed a positive',
+      function() {
+        expect(stayPositive(2)).to.equal(2);
+      }
+);
+</pre>
+	<p>Atualmente, esse teste falharia, então vamos escrever a função:</p>
+	<pre>
+
+var stayPositive = function(num) {
+      return num;
+}
+</pre>
+	<p>Se fizermos o teste novamente, ele passará, mas e se nós escrevermos um teste com um número negativo?</p>
+	<pre>
+ it('should return a positive number when passed a negative',
+      function() {
+       expect(stayPositive(-2)).to.equal(2);
+      }
+);
+</pre>
+	<p>No exemplo acima, estamos passando um valor de -2 e esperando que nossa função retorne um valor positivo de 2. Com base em nosso código, isso falharia, para que possamos reescrever nossa função para considerar números negativos:</p>
+	<pre>
+var stayPositive = function(num) {
+      if(num &gt; 0) {
+        return num;
+      } else {
+return -num;
+}
+}
+</pre>
+	<p>Agora, se fôssemos executar nossos testes de unidade, eles passariam! Viva! Mas e se o usuário passou um 0 ou uma string? Como o nosso programa lidaria com isso?</p>
+	<pre>
+it('should return 0 when passed 0', function() {
+      expect(stayPositive(0)).to.equal(0);
+});
+    it('should return an error when passed a string', function() {
+      expect(stayPositive('Hello')).to.be.an('error');
+});
+
+</pre>
+
+
+			<p>Podemos, então, modificar nosso código para manipular adequadamente esses tipos de entradas. Escrever testes unitários como esses nos permite garantir que nossos aplicativos sejam robustos e capazes de lidar com uma variedade de possíveis resultados.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Navegador e Teste Funcional</h2>
+			<p>Como desenvolvedores web, nossos aplicativos são executados em um navegador da web. Isso significa que há uma ampla variedade de ambientes variáveis, resoluções de tela e tipos de navegadores nos quais nosso aplicativo pode ser executado. Nosso site pode ser acessado por um laptop novinho em folha, visualizado por meio de um monitor de resolução 4K por meio de uma conexão de fibra óptica ou visualizado em um smartphone desatualizado, usando um navegador de ações da operadora, em uma conexão 3G.</p>
+			<p>O desafio de criar aplicativos resilientes que funcionem em vários ambientes é o que torna o desenvolvimento da Web desafiador e recompensador. Se procurarmos criar aplicativos inclusivos, aqueles que acessam nossos sites por meio de navegadores e dispositivos desatualizados podem ser as pessoas que precisam de maior acesso aos nossos serviços.</p>
+			<p>Para garantir o nível de acesso que esperamos, vamos querer executar testes funcionais de nossos aplicativos em uma variedade de sistemas operacionais e navegadores. Vejamos duas abordagens para fazer isso: usar serviços de teste do navegador e visitar um laboratório de dispositivos.</p>
+		</div>
+		<div class="alert alert-success" role="alert">
+			<h4 class="alert-heading">Diferenças do Navegador</h4>
+			<p>Enfatizar a necessidade de testes de navegador não significa que nossos sites ou aplicativos funcionem da mesma maneira em todos os navegadores. Se você estiver interessado em adotar uma abordagem em camadas para suporte a navegadores, recomendo muito ler sobre a abordagem da BBC News em seu artigo <a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard">Cutting the Mustard.</a></p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Serviços de teste de navegador</h2>
+			<p>Há vários serviços que nos permitem testar vários navegadores em vários sistemas operacionais sem instalar cada navegador ou executar máquinas virtuais. Esses serviços permitem que você carregue URLs e clique neles em muitas combinações de navegadores para dispositivos móveis e computadores.</p>
+			<ul>
+				<li>
+					<a href="https://www.browserstack.com/">BrowserStack</a>
+				</li>
+				<li>
+					<a href="https://saucelabs.com/">Sauce Labs</a>
+				</li>
+				<li>
+					<a href="https://www.browserling.com/">Browserling</a>
+				</li>
+			</ul>
+			<p>Clicar em um site pode ser eficaz para sites pequenos, mas à medida que seu projeto cresce, você pode querer automatizar esses tipos de testes. O <a href="http://docs.seleniumhq.org/">Selenium</a> é uma ferramenta popular para automatizar as ações do navehttp://webdriver.io/gador. Minha configuração preferida é usar as ligações do Selenium Node / JavaScript do <a href="">WebDriver.io’s</a> para conduzir testes funcionais em combinação com um dos serviços acima. O Sauce Labs oferece um <a href="https://saucelabs.com/blog/accelerate-multi-browser-testing-using-sauce-labs-and-webdriverio">guia útil</a> para usar o <a href="http://webdriver.io/">WebDriver.io’s</a> e o <a href="">BrowserStack</a>.</p>
+			<p>Independentemente do método, a integração de um serviço de teste do navegador em nosso fluxo de trabalho nos permite testar nossos sites e aplicativos em uma variedade de navegadores aos quais, de outra forma, não teríamos acesso.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Laboratórios de dispositivos</h2>
+			<p>Embora os serviços de teste de navegador sejam incrivelmente úteis, pode ser uma experiência recompensadora (ou frustrante!) Testar nossos aplicativos em uma variedade de dispositivos físicos em carne e osso. É particularmente útil testar em alguns tablets e telefones econômicos de baixo custo que são populares entre usuários reais. Como poucos de nós têm uma prateleira cheia de dispositivos, algumas pessoas úteis começaram a fazer curadoria dos chamados laboratórios de dispositivos para abrigar uma variedade de dispositivos para fins de teste (Figura 2-1). Esses laboratórios de dispositivos surgiram em centros de co-working, espaços de fabricantes e empresas locais. O site do <a href="Open%20Device%20Lab"></a> procura compilar esses laboratórios que são publicamente acessíveis. Se não houver um na sua área e você trabalhar para uma empresa com vários funcionários, você também pode considerar criar seu próprio laboratório. Comece com alguns dispositivos doados que você e os colegas de trabalho possam ter recolhendo poeira na prateleira como um meio de começar.</p>
+			<h2>Desenvolvimento Orientado a Testes</h2>
+			<p>O desenvolvimento orientado a testes (TDD) é uma metodologia de desenvolvimento que enfatiza a escrita do teste para um recurso antes de implementá-lo. Isso garante altos níveis de cobertura de código, permite que um desenvolvedor faça alterações na confiança e garanta a conclusão do recurso. O processo TDD funciona da seguinte maneira:</p>
+			<ol>
+				<li>Add a test</li>
+				<li>Run all tests and see if the new test fails</li>
+				<li>Write the code</li>
+				<li>Run tests</li>
+				<li>Refactor code</li>
+				<li>Repeat</li>
+			</ol>
+			<p>Existem muitos livros e recursos excelentes no TDD, por isso não vou recauchutar esse conteúdo aqui. Se você é novo no conceito de TDD, eu recomendei a exploração de recursos e materiais para TDD em seu idioma ou estrutura escolhida. Embora possa ser uma mudança de paradigma, o TDD pode adicionar um novo nível de robustez e confiança ao processo de desenvolvimento.</p>
+		</div>
+		<div class="alert alert-success" role="alert">
+			<h4 class="alert-heading">TDD or BDD?</h4>
+			<p>Você também pode se deparar com o termo desenvolvimento orientado a comportamento (BDD). Há muitos debates sobre o que exatamente é a diferença entre essas duas abordagens. Eu prefiro o descrito pelo desenvolvedor Josh Davis em seu post “<a href="http://joshldavis.com/2013/05/27/difference-between-tdd-and-bdd/">A diferença entre TDD e BDD”</a>. Essencialmente, o TDD é o processo e o BDD é uma abordagem mais detalhada, em que os testes descrevem o comportamento esperado. Estes tendem a ler como uma frase. Os leitores astutos podem perceber que no exemplo de teste de unidade acima, seguimos um processo de TDD com uma sintaxe de BDD. Encorajo-vos a explorar ambos e encontrar a abordagem que funciona melhor para você.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Automação</h2>
+			<p>Linting contra seus padrões e testes de escrita só são úteis quando são executados. Ao desenvolver ativamente, é fácil esquecer de executar um conjunto de testes em relação às nossas alterações antes de pressionar ou criar uma base de código. Felizmente, a automação é algo em que os computadores são excelentes, para que possamos remover essa responsabilidade de nós mesmos. Para projetos de código aberto ou fechado usando um modelo de solicitação pull, podemos usar ferramentas automatizadas que nos alertarão quando uma solicitação pull contiver falhas nos testes ou erros de lintagem. Isso garantirá que esse código não entra na base de código antes que esses erros sejam corrigidos. Quando usados como parte de um pipeline de integração contínua, podemos executar nossos testes e fazer com que um build falhe quando nossos testes falharem, garantindo que não enviamos códigos quebrados.</p>
+			<p>Para projetos que usam o GitHub e o modelo de solicitação pull, eu recomendo o <a href="https://travis-ci.org/">Travis CI</a>. O Travis suporta vários idiomas e é gratuito para projetos de código aberto. Também pode ser configurado para implantar em ambientes S3 e Heroku. Para ambientes internos, recomendo Jenkins. O <a href="https://jenkins.io/">Jenkins</a> é uma ferramenta de pipeline de integração contínua altamente extensível e auto-hospedada.</p>
+			<p>Existem várias alternativas disponíveis em vários idiomas. Como sempre, faça a devida diligência e encontre a ferramenta que funciona melhor para você e seus colaboradores. O aspecto importante é automatizar nossos testes e garantir que eles estejam passando antes da integração e da liberação.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Programação com par</h2>
+			<p>A programação em pares pode ser um processo extremamente benéfico, o que resulta em código aprimorado e maior colaboração da equipe. Programação em pares é o ato de dois desenvolvedores programarem juntos. Nesse processo, uma pessoa dirige digitando fisicamente o código no computador, enquanto a segunda pessoa navega falando o código que está sendo gravado com o driver. Quando bem feito, a programação em pares é extremamente eficaz.</p>
+			<p>Existem alguns requisitos para que a programação em pares seja eficaz.</p>
+			<p>Primeiro, ambos os desenvolvedores devem tratar uns aos outros com respeito e como iguais. Talvez a maior e mais comum falha na programação de pares que vi é quando desenvolvedores experientes rejeitam idéias feitas por desenvolvedores juniores. A programação em pares bem-sucedida acontece quando ambas as partes a vêem como uma oportunidade para aprender e crescer.</p>
+			<p>Em segundo lugar, o emparelhamento deve ser feito em um ambiente acolhedor. Você usa o Vim, mas seu parceiro usa um IDE? Cada pessoa precisa trabalhar em um ambiente em que se sinta confortável e capaz de contribuir plenamente. Assim como a arrogância pode fazer com que a programação em pares seja ineficaz, também pode haver sentimentos de inadequação.</p>
+			<p>Por último, ambos os desenvolvedores devem estar totalmente envolvidos na atividade de programação. Se o navegador não estiver prestando atenção, checando o telefone ou fazendo algo contraproducente, a atividade é prejudicial. A programação de pares bem-sucedida requer a atenção total de ambos os desenvolvedores.</p>
+		</div>
+		<div class="alert alert-success" role="alert">
+			<h4 class="alert-heading">Freqüência da programação em par</h4>
+			<p>Algumas organizações praticam programação em pares em tempo integral (às vezes como parte da metodologia “Extreme Programming”). Como um introvertido natural, eu nunca fui um grande fã disso, preferindo pequenas explosões de programação em pares em uma base semi-regular ou conforme necessário. Se você estiver interessado em implementar programação em pares no seu local de trabalho, comece pequeno. Peça regularmente aos colegas para se juntarem a você e se oferecerem para dirigir. Isso tira o estresse do colega. Uma vez que os benefícios estejam claros, seus colegas provavelmente farão o mesmo.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Programação Pareada Remota</h2>
+			<p>A programação em pares não é apenas para quem está no mesmo local. Na verdade, como desenvolvedor remoto nos últimos quatro anos, descobri que o pareamento é uma das melhores maneiras de se conectar com meus colegas remotos. Existem várias ferramentas que permitem a programação de pares remotos. Eu listei alguns abaixo, mas você pode achar que precisa experimentar para encontrar uma ferramenta que funcione bem para você e seus colegas.</p>
+			<p>Ferramentas de programação de pares remotos:</p>
+			<ul>
+				<li>
+					<a href="https://screenhero.com/">Screenhero</a>
+				</li>
+				<li>
+					<a href="https://floobits.com/">Floobits</a>
+				</li>
+				<li>
+					<a href="https://atom.io/packages/motepair">Motepair</a>
+				</li>
+				<li>
+					<a href="https://www.teamviewer.com/en/">TeamViewer</a>
+				</li>
+			</ul>
+			<h2>Revisando Códigos</h2>
+			<p>Muitas vezes, antes de o código ser mesclado em uma base de código, ele é revisado por outros desenvolvedores. Em um fluxo de trabalho do Git, isso geralmente é parte do processo de solicitação pull. Esse tipo de processo crítico pode ser desafiador. Escrever código é um processo mental e criativo sobre o qual sentimos um sentimento de orgulho. Quando alguém critica algo que escrevemos, pode ser frustrante ou mesmo perturbador. Como pessoa que está revisando o código, somos desafiados a realizar uma revisão completa para garantir que o código atenda aos padrões e expectativas e atenda aos requisitos sem ser excessivamente rigoroso. Como então participamos de revisões de código bem-sucedidas, tanto como revisor quanto como revisor?</p>
+			<p>A empresa de design e desenvolvimento Thoughtbot tem um guia completo de <a href="https://github.com/thoughtbot/guides/blob/master/code-review/README.md">revisão de código</a> que divide as recomendações em três categorias: todos, com seu código revisado e revisando o código. Reimprimi o guia do Thoughtbot, com permissão e algumas modificações, pois elas resumem perfeitamente a abordagem que eu recomendaria.</p>
+			<h2>Diretrizes para todos envolvidos em uma Revisão de Código</h2>
+			<p>Tanto o autor do código quanto o revisor desempenham um papel igualmente importante no processo de revisão de código. Para manter o processo positivo e eficaz, todos os participantes devem procurar fazer o seguinte:</p>
+			<ul>
+				<li>Aceite que muitas decisões de programação são opiniões. Discuta tradeoffs de sua preferência e obtenha uma solução rapidamente.</li>
+				<li>Faça boas perguntas; não faça exigências. ("O que você acha sobre nomear isso: user_id?")</li>
+				<li>Boas perguntas evitam o julgamento e evitam suposições sobre a perspectiva do autor.</li>
+				<li>Peça esclarecimentos. ("Eu não entendi. Você pode esclarecer?")</li>
+				<li>Evite a propriedade seletiva do código. ("Meu", "não meu", "seu")</li>
+				<li>Evite usar termos que possam ser vistos como referentes a traços. ("Burro", "estúpido"). Suponha que todos são inteligentes e bem intencionado.</li>
+				<li>Seja explícito. Lembre-se de que as pessoas nem sempre entendem o seu intenções online.</li>
+				<li>Seja humilde. ("Não tenho certeza, vamos procurar")</li>
+				<li>Não use hipérbole. (“Sempre”, “nunca”, “infinitamente”, “nada”)</li>
+				<li>Não use sarcasmo.</li>
+				<li>Mantenha Real. Se emoji, gifs animados ou humor não são você, não forçá-los. Se eles são, use-os com desenvoltura.</li>
+				<li>Fale de forma síncrona (por exemplo, bate-papo, compartilhamento de tela, pessoalmente) se houver são muitos "Eu não entendi" ou "Solução alternativa:" comentários. Poste um comentário de acompanhamento resumindo a discussão.</li>
+			</ul>
+			<h2>Diretrizes para ter seu código revisado</h2>
+			<p>Ter nosso código revisado pode ser um processo estressante. Lembre-se que a revisão é do código, não você pessoalmente. Com isso em mente, pretenda seguir estas diretrizes:</p>
+			<ul>
+				<li>Seja grato pelas sugestões do revisor. ("Boa ligação. Eu farei essa mudança")</li>
+				<li>Procure entender a perspectiva do revisor.</li>
+				<li>Explique por que o código existe. ("É assim por causa dessas razões. Seria mais claro se eu renomei essa classe / arquivo / método / variável?")</li>
+				<li>Tente responder a todos os comentários.</li>
+				<li>Extraia algumas alterações e refatorações em futuros tickets / stories.</li>
+				<li>Link para a revisão de código do ingresso / história</li>
+				<li>Empurre confirmações com base em rodadas anteriores de feedback como confirmações isoladas para o ramo.</li>
+				<li>Espere para mesclar a ramificação até que a Integração Contínua informe que a suíte de testes passou.</li>
+				<li>Mesclar uma vez que você se sentir confiante no código e seu impacto no projeto.</li>
+			</ul>
+			<h2>Diretrizes para Revisar o Código</h2>
+			<p>Revisar o código de outra pessoa é uma responsabilidade. Para ser um revisor de código eficaz, é fundamental entender primeiro a perspectiva do autor. Coloque-se no lugar deles e tente se comunicar de uma forma clara e sem julgamento. Começando com esta perspectiva empática, também pretendo fazer o seguinte na sua análise:</p>
+			<ul>
+				<li>Entenda porque a mudança é necessária (bug, experiência do usuário, refatoração).</li>
+				<li>Comunique-se sobre quais ideias você sente e quais não.</li>
+				<li>Identifique maneiras de simplificar o código enquanto ainda resolve o problema.</li>
+				<li>Evite se concentrar em questões triviais ou coisas fora do alcance das mudanças que estão sendo revisadas.</li>
+				<li>Se as discussões se tornarem muito filosóficas ou acadêmicas, coloque a discussão offline.v</li>
+				<li>Enquanto isso, deixe o autor tomar a decisão final sobre implementações alternativas.</li>
+				<li>Ofereça implementações alternativas, mas assuma que o autor já as tenha considerado. ("O que você acha de usar um validador personalizado aqui?")</li>
+				<li>Encerre a solicitação de recebimento com um comentário: thumbsup: emoji ou “Ready to merge”.</li>
+			</ul>
+		</div>
+
+		<div class="alert alert-primary" role="alert">
+  <h4 class="alert-heading">Leitura Adicional</h4>
+  
+ <ul>
+				<li>
+					<a href="https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code">Working E ectively with Legacy Code</a> by Michael Feathers
+				</li>
+				<li>
+					<a href="http://docs.python-guide.org/en/latest/writing/tests/">The Hitchhiker’s Guide to Python: Testing Your Code</a> by Kenneth Reitz
+				</li>
+				<li>
+					<a href="https://mozillascience.github.io/codeReview/intro.html">“Code Review in the Lab”</a> by Mozilla Science
+				</li>
+				<li>
+					<a href="http://www.developer.com/tech/article.php/3579756/Effective-Code-Reviews-Without-the-Pain.htm">“Effective Code Reviews Without the Pain”</a> by Robert Bogue
+				</li>
+			</ul>
+</div>
+
+		<h1>Capítulo 3</h1>
+		<h2 id="opensource">Open Source</h2>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<p>A knotty puzzle may hold a scientist up for a century, when it may be that a colleague has the solution already and is not even aware of the puzzle that it might solve. —Isaac Asimov, e Robots of Dawn</p>
+			<p>Eu não "peguei" o software de código aberto na primeira vez que o vi conscientemente. Eu era um jovem professor com foco em tecnologia, apenas me esforçando, e meu interesse por tecnologia excedia a minha renda dispensável. Isso significa que, a princípio, o software de código aberto era, aos meus olhos, um substituto para apoiar meus interesses, ao mesmo tempo em que evitava tanto comprar software caro quanto piratear ilegalmente. Gradualmente, aconteceu uma coisa engraçada: deixei de ver as ferramentas de código aberto como opções menores e passei a abraçar tanto o software quanto a comunidade do entorno. Isso se transformou em um sentimento de reverência quando viesse a respeitar muito a quantidade de colaboração assíncrona voluntária e de longa distância que envolvia a construção de softwares completos.</p>
+			<p>Quando descobri o código aberto, estava longe de ser novo. O código fonte foi distribuído gratuitamente com algum software desde os primeiros dias da computação. Nos anos 80 e no início dos anos 90, a cultura do software livre cresceu junto com a internet antiga. O desenvolvimento aberto de Linux de Linus Torvalds, a Free Software Foundation de Richard Stallman, a transição do Netscape para o Mozilla e a linguagem de programação Java foram elementos fundamentais no desenvolvimento do código aberto. Hoje, o código aberto é maior do que nunca. A prevalência do Git e a popularidade do <a href="https://github.com/">GitHub</a> criaram um enorme centro social para o código aberto.</p>
+			<p>O software de código aberto é uma parte extremamente importante da cultura tecnológica. A ferramenta de edição de texto que estou usando para escrever isso é open source, o navegador que estou usando para pesquisar este livro é open source, e o sistema operacional em execução na minha máquina é construído sobre o sistema operacional Unix de código aberto. O WordPress, o software de código aberto para blogs, é estimado em mais de 25% de todos os sites da web. Não são apenas projetos grandes de código aberto, mas muitos dos sites, ferramentas e aplicativos nos quais confiamos são construídos usando bibliotecas menores de código aberto.</p>
+			<p>Como desenvolvedores da Web, é inevitável que interagamos com o código aberto de alguma forma. Para muitos desenvolvedores que podem ser apenas consumidores de código aberto, muitos de nós podem manter nossos próprios projetos ou contribuir com outras pessoas com códigos, relatórios de bugs ou solicitações de suporte. Quando fazemos isso, estamos participando de uma grande rede social de desenvolvedores. Quando nossas contribuições são inclusivas e empáticas, ajudamos a criar uma cultura de desenvolvimento melhor.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Sendo um mantedor de código aberto</h2>
+			<p>Ser um mantenedor de código aberto geralmente começa simplesmente: um desenvolvedor tem uma ideia para um projeto ou abstrai um pedaço de um projeto maior e libera o código-fonte. Mais frequentemente do que não, isso pode ser o fim do trabalho. O código está fora do ar para qualquer um usar, mas às vezes esse código pode ser algo que outros desenvolvedores acham útil. Quando lançamos código aberto, agora somos mantenedores de código aberto.</p>
+			<p>Conforme um projeto cresce em popularidade, um mantenedor de código aberto também se torna um pastor da cultura que cerca o projeto. Às vezes, essa cultura consiste apenas de um punhado de usuários com interações infrequentes e, outras vezes, pode se tornar algo que parece precisar de cuidados e atenção quase constantes.</p>
+			<p>Se um mantenedor de código aberto é um pastor cultural, quais são as responsabilidades éticas desse papel? Os mantenedores de código aberto têm quatro preocupações principais:</p>
+			<ul>
+				<li>Seja gentil, acolhedor e amigável</li>
+				<li>Inclua e imponha um código de conduta</li>
+				<li>Inclua uma licença</li>
+				<li>Evite o esgotamento</li>
+			</ul>
+			<h2>Seja acolhedor e amigável</h2>
+			<p>Talvez a coisa mais importante que podemos fazer como mantedores de código aberto é sermos receptivos e amigáveis para aqueles que usam nosso projeto. As principais formas de interação com os usuários são por meio da documentação e de nossas respostas aos problemas. Estes são ambos os meios baseados em texto, o que significa que o leitor não tem nenhuma das pistas físicas de conversa que ajudam na compreensão do nosso tom.</p>
+			<p>Nós estaremos cobrindo a documentação no próximo capítulo, mas em resumo ao escrever a documentação para o nosso projeto, devemos procurar ser o mais convidativo possível. Os usuários do nosso projeto podem vir de uma variedade de experiências, níveis de habilidade e contextos culturais / linguísticos. Uma ótima documentação não faz suposições sobre o que o leitor já conhece ou compreende. Não há problema em fornecer instruções rápidas para usuários experientes que desejam mergulhar, mas também para fornecer instruções explícitas ou links para recursos úteis para ajudar menos pessoas com menos experiência a entender a base de código, além do problema que o código está tentando resolver. . Ao fazer isso, você definirá o tom do projeto em si e ajudará a minimizar os problemas desnecessários que estão sendo criados.</p>
+			<p>Questões e solicitações de correções de bugs são talvez a parte mais desafiadora de ser um mantenedor de código aberto, particularmente à medida que um projeto cresce em popularidade. As respostas dos problemas são onde interagimos mais diretamente com a comunidade. Considere estes dois tipos comuns de interações de problemas.</p>
+			<p></p>
+			<h4>Interação #1: o usuário frustrado</h4>
+			<p><strong>Usuário:</strong> Este software está totalmente quebrado desde a última atualização. Isso precisa ser corrigido o mais cedo possível.</p>
+			<p>Quando nos deparamos com esses tipos de problemas e solicitações, isso pode ser muito frustrante. Este é o nosso trabalho e é algo que nós provavelmente nos orgulhamos. Não apenas isso, mas nós o compartilhamos publicamente e livremente, enquanto trabalhamos nisso em nosso precioso tempo livre. Isso significa tempo longe da família, amigos e outras coisas que amamos fora da programação. Como tal, pode parecer perturbador ou mesmo enfurecedor quando alguém é excessivamente crítico ou faz exigências de nossos projetos. A coisa mais importante que podemos fazer quando nos deparamos com esses tipos de problemas é reagir com calma. Na internet, isso geralmente é chamado de "não alimente os trolls". Não há nada errado em encerrar um problema com um simples "sinto muito por não atender às suas necessidades".</p>
+			<p>Também podemos adotar uma abordagem proativa para mitigar esses tipos de criadores de problemas, incluindo modelos para problemas e solicitações de solicitações em nossos projetos. O <a href="https://github.com/blog/2111-issue-and-pull-request-templates">GitHub</a> oferece a capacidade de incluir modelos em seu projeto que criarão um esboço para cada novo problema e uma solicitação pull criada. Bons modelos fornecerão uma estrutura para os contribuidores criarem problemas e contribuírem para o projeto, potencialmente aliviando a falta de contexto que eles geralmente contêm. O desenvolvedor Steve Mao criou um conjunto útil de <a href="https://github.com/stevemao/github-issue-templates">modelos de exemplo</a> e uma coleção de exemplos de problemas e modelos de solicitação pull foi coletada pelos modelos <a href="https://github.com/devspace/awesome-github-templates">Awesome GitHub do projeto</a>.</p>
+			<p></p>
+			<h4>Interação #2: O mantedor curto</h4>
+			<p><strong>Usuário:</strong> Estou com problemas no ambiente X in Y. Eu tentei reinstalar com o patch mais recente, mas não tive sorte. Alguma ideia?</p>
+			<p><strong>Mantenedor:</strong> Esse é um problema conhecido. Atualize as dependências.</p>
+			<p>O acima pode não parecer muito ruim. Provavelmente, como um mantenedor, estamos fazendo esse trabalho em nosso tempo livre, fazendo o melhor para responder ao maior número possível de problemas. No entanto, para um usuário, uma resposta como a acima pode parecer desdenhosa ou até mesmo hostil. Se eles estão arquivando um problema, é provável que eles estejam tentando ajudar ou tenham se deparado com um bug que afeta o que eles estão trabalhando. Uma resposta curta de nós pode torná-los menos propensos a ajudar no futuro ou servir para agravar sua frustração. Vamos considerar de que outra forma poderíamos responder, mas primeiro vamos dar um rápido desvio para a teoria da comunicação. Em seu livro <a href="http://www.nonviolentcommunication.com/">Nonviolent Communication: A Language of Life</a>, o Dr. Marshall B. Rosenberg apresenta um processo de comunicação positiva. Os quatro principais passos para este processo são:</p>
+			<ol>
+				<li><strong>Observações:</strong> descrevendo objetivamente a situação.</li>
+				<li><strong>Sentimentos:</strong> dizendo como você se sente em relação ao que você observou.</li>
+				<li><strong>Necessidades:</strong> as necessidades que não estão sendo atendidas devido a esses sentimentos.</li>
+				<li><strong>Solicitações:</strong> solicitação clara de ação.</li>
+			</ol>
+			<p>Todos os itens acima são feitos sem atribuir qualquer forma de culpa. Ao adaptar nossa resposta, com base no modelo do Dr. Rosenberg, podemos melhorar nossa resposta ao problema.</p>
+			<p>Primeiro, faça uma observação reafirmando o problema e reconhecendo os sentimentos do usuário:</p>
+			<p>Oi <strong>usuário</strong>, lamento que você esteja tendo problemas com o X no ambiente Y, isso pode ser muito frustrante.</p>
+			<p>Em seguida, descreva como as necessidades dos usuários podem ser atendidas:</p>
+			<p>Eu já vi esse problema antes e geralmente pode ser resolvido atualizando as dependências. A melhor maneira de fazer isso é remover o diretório de dependências e reinstalar. Aqui estão os comandos para fazer isso ...</p>
+			<p>Por fim, faça uma solicitação para mais ações ou acompanhamento do usuário:</p>
+			<p>Por favor, deixe-me saber se isso resolveu seu problema.</p>
+			<p>Colocando tudo isso junto, nossa resposta pode ser algo como isto:</p>
+			<p><strong>Mantedor</strong>: Olá <strong>usuário</strong>, lamento que você esteja tendo problemas com o X no ambiente Y. Eu já vi esse problema antes e geralmente pode ser resolvido atualizando as dependências. A melhor maneira de fazer isso é remover o diretório de dependências e reinstalar. Aqui estão os comandos para fazer isso:</p>
+			<p>Por favor, deixe-me saber se isso resolveu seu problema.</p>
+			<p>Nessa resposta, reconhecemos o problema do usuário ao reformulá-lo, abordamos as necessidades do usuário com uma correção de recomendação concreta e uma descrição simples, caso não estejam familiarizadas, e fizemos um pedido claro para que eles verificassem a correção. Embora essa resposta seja mais longa, levaria apenas um minuto a mais para ser digitado e ajudaria a construir uma comunidade mais acolhedora.</p>
+		</div>
+		<div class="alert alert-success" role="alert">
+			<h4 class="alert-heading">Quando você está muito ocupado</h4>
+			<p>Às vezes, como mantenedor de código aberto, simplesmente não temos tempo para responder aos problemas de maneira oportuna. Estamos ocupados no trabalho, em férias ou muito em nossas vidas pessoais. Tudo bem (e bom!). Não devemos sentir uma obrigação persistente nesses cenários. Em vez disso, quando você tiver uma chance, simplesmente responda a problemas com uma confirmação como "Sinto muito pela resposta lenta". Eu tenho viajado. Se isso ainda é um problema, você se importa de responder e eu vou ver o que precisa ser feito para resolvê-lo. Obrigado!"</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Usando bots</h2>
+			<p>Para projetos de código aberto muito ativos, adoro a recomendação de bot feita por Felix Krause em seu artigo, <a href="https://krausefx.com/blog/scaling-open-source-communities">“Scaling Open Source Communities”</a>. No artigo, ele demonstra como o projeto <a href="https://github.com/fastlane">fastlane</a> usa bots para verificar automaticamente se os novos problemas contêm todas as informações necessárias, bem como para fechar os problemas antigos. Isso reduz a carga de respostas do mantenedor e reduz o atrito com a comunidade seguindo as mesmas diretrizes de forma clara e consistente para todos os problemas.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Código de conduta de código aberto</h2>
+			<p>Talvez um dos documentos mais importantes que podem ser incluídos em um projeto seja um código de conduta. Um bom código de conduta estabelecerá expectativas claras de interação positiva entre a comunidade, bem como resultados para aqueles que não atenderem a essas expectativas. O objetivo do código de conduta é fornecer diretrizes para uma comunidade aberta e inclusiva em torno de nossos projetos.</p>
+			<p>Em seu artigo Códigos de Conduta 101 + FAQ, o programador, defensor e consultor Ashe Dryden descreve um código de conduta de sucesso como a necessidade dessas quatro partes:</p>
+			<ul>
+				<li>Uma declaração de comportamento inaceitável</li>
+				<li>Informações sobre como a política será aplicada</li>
+				<li>Informações sobre como e com quem relatar um incidente</li>
+				<li>Materiais de treinamento e referência para os organizadores, funcionários e voluntários sobre como responder aos relatórios de incidentes</li>
+			</ul>
+			<p>Para estabelecer uma declaração de comportamento inaceitável e incluir informações sobre como a política será aplicada, recomendo usar ou, pelo menos, basear sua política na <a href="http://contributor-covenant.org/">Contribuição do Contribuinte</a>. A Contribuição do Contribuinte é um recurso licenciado da Creative Commons que inclui uma promessa de inclusão, padrões de comportamento, exemplos de comportamento inaceitável e modelo, responsabilidades dos mantenedores, informações sobre como relatar incidentes e informações de aplicação. Para incluir o Contributors Covenant em seu projeto, recomendo adicionar um arquivo code_of_conduct.md aos arquivos do projeto junto com um link no projeto README que declara:</p>
+			<p>## Código de conduta</p>&nbsp;&nbsp;&nbsp;&nbsp;
+			<p>Este projeto adere ao &nbsp;&nbsp;&nbsp;&nbsp; [Pacto do Colaborador 1.4] [code-of-conduct.md]. &nbsp;&nbsp;&nbsp;&nbsp; Ao participar, espera-se que você honre este código. &nbsp;&nbsp;&nbsp;&nbsp; Por favor, comunique um comportamento inaceitável para user@example.com.</p>
+			<p>Incluir o código de conduta é apenas o primeiro passo. Também devemos estar preparados e informados para agir em caso de ocorrência de um incidente. Para esses incidentes, o Projeto Django tem um manual de aplicação muito útil. Para projetos grandes ou ativos, recomendo adaptar este manual para atender às necessidades do seu projeto e compartilhar publicamente o compromisso com a fiscalização. Para um projeto com vários mantenedores, é essencial que toda a equipe esteja bem versada tanto no código de conduta quanto nas ações de fiscalização que possam ser tomadas.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Licenças de código aberto</h2>
+			<p>Algumas pessoas na comunidade de código aberto sentem muito fortemente sobre uma licença específica. Não estou aqui para doutriná-lo a usar uma licença específica, mas simplesmente para encorajá-lo a usar uma licença. A Open Source Initiative mantém uma lista canônica de licenças aprovadas pela organização, sendo as mais populares:</p>
+			<ul>
+				<li>Apache License 2.0</li>
+				<li>BSD 3-Clause “New” or “Revised” license</li>
+				<li>BSD 2-Clause “Simplified” or “FreeBSD” license</li>
+				<li>GNU General Public License (GPL)</li>
+				<li>GNU Library or “Lesser” General Public License (LGPL)</li>
+				<li>MIT license</li>
+				<li>Mozilla Public License 2.0</li>
+				<li>Common Development and Distribution License</li>
+				<li>Eclipse Public License</li>
+			</ul>
+			<p>O benefício de aplicar uma licença é que ela permite que você crie os termos pelos quais seu projeto pode ser usado. A licença do MIT, por exemplo, permite que os usuários usem seu código da maneira que escolherem, desde que forneçam alguma forma de atribuição. Em contrapartida, a GPL exige que qualquer licença de trabalho derivado seja feita sob os mesmos termos, o que efetivamente proíbe a formação de projetos de código fechado usando código licenciado sob a GPL. Ao escolher uma licença para o seu código, você está indicando como ele pode ser usado e creditado. Isso também abre nossos projetos para serem usados (ou não) por organizações que podem não conseguir fazer isso com códigos não licenciados.</p>
+			<p>A maneira mais simples de incluir uma licença em seu projeto é incluir o texto da licença ou uma declaração de qual licença está sendo usada na parte inferior do README do projeto. Você também pode incluir o texto completo da licença em uma LICENÇA de nome de arquivo no nível superior do projeto. Se você não tiver certeza de qual licença aplicar em seus projetos, recomendo o guia em choosealicense.com. O site, criado pelo GitHub, orienta os usuários para licenças populares com base em necessidades e preocupações específicas.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Evitando o esgotamento do mantedor</h2>
+			<p>Se tudo isso parecer familiar, sugiro que você leia a perspectiva de desenvolvedores que lutaram com o esgotamento de código aberto:</p>
+			<ul>
+				<li>“Maintainer’s Guide to Staying Positive” by Jon Schlinkert</li>
+				<li>“What It Feels Like to Be an Open-Source Maintainer” by Nolan Lawson</li>
+				<li>“How to Avoid Burnout Managing an Open Source Project” by Dawn Foster</li>
+				<li>“Dear JavaScript” by James Kyle</li>
+			</ul>
+			<p>Se você tem contribuído para o código aberto e se sente esgotado, eu ofereço estes três conselhos:</p>
+			<p><strong>Cuide da sua saúde e bem-estar</strong></p>
+			<p>Coisas como o sono, nutrição e tempo com amigos e familiares são importantes. Embora a velocidade da mudança no desenvolvimento da web possa nos fazer sentir como se precisássemos estar constantemente envolvidos, ser um ser humano completo e saudável nos ajudaria a ser também melhores desenvolvedores.</p>
+			<p><strong>Não há problema em ignorar as coisas</strong></p>
+			<p>À medida que os problemas e solicitações de pedidos se acumulam, podemos nos tornar sobrecarregados ou mesmo culpados devido à falta de ação. Quase todas as vezes que falo com o autor de um projeto popular de código aberto, eles mencionam um sentimento de culpa por não abordar um bug ou responder a problemas pendentes. Embora possa ser difícil de fazer, é importante deixar de lado a sensação incômoda de que isso é criado e aceitar que é impossível para uma pessoa responder a todas as necessidades de um projeto.</p>
+			<p><strong>Não tenha medo de reprovar um projeto</strong></p>
+			<p>Quando um projeto perdeu completamente seu interesse ou atenção, pode ser melhor reprovar o projeto ou entregá-lo a outros mantenedores. A maneira mais fácil de fazer isso é colocar um grande aviso DESCONTINUADO na descrição do projeto e no README. Você também pode se oferecer para transferir a propriedade do projeto se outra pessoa estiver interessada em aceitá-lo. Isso significa para os usuários que você não estará mais respondendo a problemas ou contribuindo com novos recursos e correções de bugs. Fazer isso não é admitir a derrota, mas sim permitir que nos movamos para coisas diferentes.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Contribuindo para o projeto de outra pessoa</h2>
+			<p>Existem várias maneiras pelas quais podemos contribuir para projetos de código aberto sem sermos mantenedores de projetos. Estes podem incluir o código contribuinte, arquivar relatórios de erros, melhorar a documentação e solicitar suporte. Assim que realizamos qualquer uma dessas ações, somos parte da comunidade que envolve o projeto. Semelhante ao seu recurso para mantenedores de código aberto, o desenvolvedor Jon Schlinkert escreveu um Guia para Contribuição Idiomática, que é uma referência útil para qualquer pessoa que esteja envolvida em uma comunidade de código aberto.</p>
+			<p>Em geral, os colaboradores do código aberto devem procurar:</p>
+			<ul>
+				<li>Siga sempre o código de conduta de um projeto.</li>
+				<li>Familiarize-se com os objetivos e o escopo do projeto.</li>
+				<li>Verifique se há problemas existentes ou relatórios de bugs antes de preencher um novo.</li>
+				<li>Seja gentil com os mantenedores do projeto e outras comunidades membros.</li>
+				<li>Siga as convenções de codificação que o projeto já implementou.</li>
+				<li>Escrever testes para quaisquer novos recursos ou alterações de código. Se um conjunto de testes não estiver em vigor, descreva como o mantenedor pode testar suas alterações.</li>
+				<li>Seja paciente e reconheça o direito dos mantedores de serem lentos ao responder.</li>
+				<li>Aceitar rejeição quando um projeto escolhe não mesclar código ou implementar uma recomendação.</li>
+			</ul>
+			<p>Participar de uma comunidade de código aberto pode ser uma experiência maravilhosa. Seguir as diretrizes acima, bem como estar ciente dos desafios colocados aos mantenedores de código aberto, pode nos ajudar a contribuir positivamente com a comunidade.</p>
+			<p></p>
+		</div>
+
+<div class="alert alert-primary" role="alert">
+  <h4 class="alert-heading">Leitura Adicional</h4>
+
+		<ul>
+			<li>
+				<a href="">The Cathedral & the Bazaar by Eric S. Raymond</a>
+			</li>
+			<li>
+				<a href="https://opensource.guide/">Open Source Guides</a>
+			</li>
+			<li>
+				<a href="http://producingoss.com/">Producing Open Source So ware</a> by Karl Fogel
+			</li>
+			<li>
+				<a href="https://krausefx.com/blog/scaling-open-source-communities">“Scaling Open Source Communities”</a> by Felix Krause
+			</li>
+			<li>
+				<a href="https://opensource.com/life/16/3/contributor-guidelines-template-and-tips">“A Template for Creating Open Source Contributor Guidelines”</a> by Safia Abdalla
+			</li>
+		</ul>
+	</div>
+		<h1>Capítulo 4</h1>
+		<h2 id="documentacao">Documentação</h2>
+		<p>Escrever é um trabalho árduo. Uma sentença clara não é por acaso. —William Zinsser, author of On Writing Well</p>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<p>Vou começar este capítulo descrevendo dois cenários comuns na vida de um desenvolvedor.</p>
+			<p>Em nosso primeiro cenário, conheça o Harlow. Hoje é o primeiro dia de Harlow em um novo projeto. A equipe tem uma base de código bem estabelecida, um ótimo ambiente de trabalho e um robusto conjunto de testes. Enquanto Harlow se senta em sua mesa, ela está animada para acompanhar a equipe. Após a reunião de stand-up da manhã, ela apontou para a documentação do projeto para instalação com uma leve careta de seu colega Riley. Ele menciona que os documentos “podem estar um pouco desatualizados, mas devem ser o suficiente para você ir”. Harlow passa o resto do dia seguindo a documentação até que ela fica presa e então é forçada a cavar código ou peça aos colegas orientação. O que pode ter levado alguns minutos se torna um exercício de frustração de um dia inteiro, adulterando a excitação inicial de Harlow.</p>
+			<p>Em nosso segundo cenário, conheça Harrison. Ele está trabalhando em um aplicativo da web e encontra uma biblioteca que, à primeira vista, parece incrivelmente útil para seu projeto. Enquanto ele tenta integrá-lo com sua base de código, ele descobre que partes da API parecem estar encobertas na documentação ou até mesmo não documentadas. No final, ele se afasta do projeto em favor de outra solução.</p>
+			<p>Embora esses cenários possam ser um pouco exagerados, mas tenho certeza de que muitos de nós podem se relacionar. Esses problemas não foram causados principalmente por códigos de baixa qualidade, mas por uma documentação deficiente.</p>
+			<p>Se a documentação útil é tão importante para o sucesso dos projetos e o bem-estar do desenvolvedor, por que todos os projetos não a têm? A resposta, creio eu, é que, como um bom código, a boa documentação é difícil e consome muito tempo para escrever. O objetivo deste capítulo é convencê-lo de que escrever uma boa documentação merece sua valiosa atenção, além de fornecer diretrizes concretas para isso.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Aos meus olhos, existem oito regras que podemos seguir para produzir uma boa documentação:</h2>
+			<h3>Escreva documentação que:</h3>
+			<ol>
+				<li>seja convidativa e clara</li>
+				<li>seja abrangente, detalhando em todos aspectos do projeto</li>
+				<li>eja skimmable</li>
+				<li>ofereça exemplos de como usar o Programa</li>
+				<li>tenha repetição, quando útil</li>
+				<li>esteja atualizada</li>
+				<li>seja fácil de para contribuir</li>
+				<li>seja fácil de encontrar</li>
+			</ol>
+			<p>A regra mais importante da boa documentação é que seja tão convidativa quanto possível. Isso significa que devemos procurar escrevê-lo nos termos mais claros possíveis sem pular nenhuma etapa. Devemos evitar fazer suposições sobre o que nossos usuários podem saber. Às vezes, isso pode parecer exagero e podemos ficar tentados a dizer algo como “todo desenvolvedor X sabe sobre Y”, mas cada um traz nosso próprio histórico e um conjunto de experiências para um projeto. Embora isso possa resultar em documentação mais detalhada, é mais simples, pois há menos adivinhação envolvida para desenvolvedores com todos os níveis de experiência.</p>
+			<p>Nossa documentação deve ser abrangente. Isso significa que todos os aspectos do projeto estão documentados. Recursos ou exceções não documentados podem levar à frustração e tornar-se um problema, já que os usuários e outros desenvolvedores são forçados a ler o código para encontrar as respostas de que precisam. A documentação completa de todos os recursos elimina esse tipo de ambiguidade.</p>
+			<p>Quando escrevemos a documentação que é skimmable, ajudamos os usuários a encontrar o conteúdo de que precisam rapidamente. Fazer documentação skimmable pode ser feito usando títulos claros, listas com marcadores e links. Para documentação de projetos grandes, uma tabela de conteúdo ou navegação clara ajudará os usuários a pular direto para o que eles precisam, em vez de percorrer um único documento longo.</p>
+			<p>Documentation that features examples allows users to see how they might use the code themselves. Aim to provide examples of the most common use cases for the project, while letting the comprehensive documentation detail every possibility.</p>
+			<p>É perfeitamente aceitável incluir alguma repetição em nossa documentação, que os termos do projeto <a href="http://www.writethedocs.org/guide/writing/docs-principles/#arid">Write the Docs ARID</a> (aceita (algumas) repetições na documentação). Isso confirma que os usuários podem não ler os documentos completos ou que algumas informações são relevantes em vários locais da documentação. Embora um bom código possa ser SECO, a boa redação visa ser clara e às vezes isso significa repetir a nós mesmos. O projeto Write the Docs chama a diferença entre escrever que é ARID, DRY e WET desta maneira:</p>
+			<p>A busca de minimizar a repetição permanece valente! ARID não significa WET, daí a palavra escolha. Isso significa: tente manter as coisas o mais secas possível, mas também reconheça que você precisará inevitavelmente de uma certa quantidade de "umidade" para produzir a documentação.</p>
+			<p>A documentação efetiva é mantida atualizada. Isso é surpreendentemente desafiador. Podemos começar nosso projeto com a melhor das intenções e com uma ótima documentação, mas à medida que nosso software evolui e estamos rapidamente interagindo, pode ser fácil desmaiar. Se você estiver trabalhando como parte de uma equipe de desenvolvimento ágil, recomendamos adicionar a documentação à "definição de execução" de sua equipe. Para projetos independentes, tente tratar a documentação como uma etapa final importante.</p>
+			<p>A documentação fácil de contribuir também é fácil de manter atualizada. A maneira mais simples de tornar a documentação fácil de contribuir é tratá-la como código, armazenando-a como texto no controle de origem. O site e o livro Docs Like Code defende o tratamento de nossos documentos, como nosso código, usando o controle de origem, automatizando as compilações e aplicando ferramentas e técnicas de desenvolvimento de software às nossas práticas de documentação.</p>
+			<p>A documentação é tão útil quanto é fácil descobrir. Manter um arquivo README atualizado e vincular a uma documentação mais extensa no topo do README, quando necessário, ajuda a manter a capacidade de descoberta simples.</p>
+			<p>Espero que essas diretrizes sejam úteis para você elaborar a documentação do seu projeto. Às vezes, é útil lembrar que a documentação não é apenas para outros desenvolvedores, mas também para nossos futuros eus. Quando retornarmos a um projeto após alguns meses, apreciaremos o trabalho que colocamos em documentação clara e atualizada.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>A importância do README</h2>
+			<p>Para muitos desenvolvedores, o README de um projeto será sua introdução a um software. Para projetos pequenos, o README pode ser sua única forma de documentação. Os READMEs bem-sucedidos são informativos e convidativos, oferecendo ao leitor uma sólida compreensão do projeto e fornecendo a confiança necessária para usar o software.</p>
+			<p>Os READMEs bem-sucedidos contêm uma combinação de vários elementos-chave. Mais importante ainda, o README deve estar atualizado e fornecer um guia útil para começar, escrito em um tom caloroso e acolhedor. Aqui estão os principais componentes de um bom README:</p>
+			<ul>
+				<li>Uma breve descrição (um parágrafo ou menos) do projeto</li>
+				<li>Uma lista dos principais recursos do software</li>
+				<li>Um guia de primeiros passos que detalha as etapas de instalação, diretrizes de uso e instruções para criar e implantar o software, se aplicável</li>
+				<li>Informações sobre onde ir se o usuário precisar de ajuda, como o rastreador de problemas, canal de IRC ou um endereço de e-mail de um desenvolvedor principal</li>
+				<li>Diretrizes sobre como contribuir com o projeto, incluindo como arquivar uma solicitação pull, padrões de codificação e como executar o teste suíte</li>
+				<li>Um código de conduta para o projeto que demonstra a inclusão e descreve ações claras de fiscalização</li>
+				<li>Uma licença para o projeto</li>
+			</ul>
+			<p>Mais importante, o README de um projeto precisa ser mantido atualizado. Poucas coisas são mais frustrantes do que descobrir que um recurso documentado no README foi alterado ou removido. Marc Esher, gerente de desenvolvimento de software do Consumer Financial Protection Bureau, escreveu sobre a realização de um <a href="https://cfpb.github.io/articles/readme-refresh-day/">README Refresh Day</a> com a equipe de desenvolvimento. Se você trabalha em equipe, fazer eventos como esses regularmente pode ser uma ótima maneira de melhorar o conteúdo de seus READMEs e de explorar softwares criados por outras equipes.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Modelo README</h2>
+			<p>Aqui está um modelo README que pode ser usado para seus próprios projetos. Sinta-se à vontade para adaptá-lo às necessidades do seu projeto.</p>
+			<p># Título do projeto</p>
+			<p>Forneça uma breve descrição (1 parágrafo ou menos) significativa do projeto e o que ele faz. Se o projeto tiver uma interface do usuário, inclua também uma captura de tela.</p>
+			<p>Se houver documentação mais abrangente, conecte-a aqui.</p>
+			<p>## Características</p>
+			<p>Descreva os principais recursos do projeto (o que ele faz?) Na forma de uma lista com marcadores:</p>
+			<ul>
+				<li>Recurso # 1</li>
+				<li>Recurso # 2</li>
+				<li>Recurso # 3</li>
+			</ul>
+			<p>## Começando</p>
+			<p>Forneça instruções de instalação, orientação geral de uso, exemplos de API e informações de compilação e implantação. Assuma o mínimo de conhecimento prévio possível, descrevendo tudo em passos claros e coerentes. Evite palavras como "apenas" e "simples", que podem ser decepcionantes para usuários que não entendem as instruções.</p>
+			<p>### Instalação / Dependências</p>
+			<p>Como um usuário é iniciado e executado com seu projeto? Quais dependências o projeto tem? Aponte para descrevê-los em etapas claras e simples. Forneça links externos.</p>
+			<p>### Uso</p>
+			<p>Forneça exemplos claros de como o projeto pode ser usado. Para grandes projetos com documentação externa, forneça alguns exemplos e faça um link para os documentos completos aqui.</p>
+			<p>### Build / Deployment</p>
+			<p>Se o usuário estiver construindo ou implantando o projeto, adicione qualquer orientação útil.</p>
+			<p>## Conseguindo ajuda</p>
+			<p>O que os usuários devem fazer e esperar quando encontrarem bugs ou ficarem presos usando seu projeto? Defina as expectativas de suporte, vincule o rastreador de problemas e o roteiro, se aplicável.</p>
+			<p>Para onde os usuários devem ir se tiverem alguma dúvida? (Stack Overflow, Gitter, IRC, lista de discussão, etc.)</p>
+			<p>Se desejar, você também pode fornecer links para os endereços de e-mail do colaborador principal.</p>
+			<p>## Diretrizes Contribuintes</p>
+			<p>Inclua instruções para configurar o ambiente de desenvolvimento, padrões de código, execução de testes e envio de solicitações de recebimento. Objetivo de ser inclusivo e acolhedor. Pode ser útil vincular a um arquivo CONTRIBUTING.md separado. Veja este exemplo do projeto Hoodie como um exemplo: <a href="">https://github.com/hoodiehq/hoodie/blob/master/CONTRIBUTING.md</a></p>
+			<p>## Código de conduta</p>
+			<p>Projetos de código aberto devem seguir um código de conduta. Forneça um link para o Código de Conduta do seu projeto. Recomendo usar o contrato do contribuinte:</p>
+			<p>## Licença</p>
+			<p>Inclua uma licença para seu projeto. Se você precisar de ajuda para escolher uma licença, use este guia: <a href="">https://choosealicense.com/</a></p>
+			<p>Eu abri o código desse modelo e forneci diretrizes para uso em: <a href="https://github.com/ascott1/readme-template.">https://github.com/ascott1/readme-template.</a></p>
+			<p></p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Documentação do projeto</h2>
+			<p>Bases de código maiores exigirão documentação que ultrapasse um README. Nesses casos, um bom README (ou READMEs, se o projeto é dividido em várias bases de código menores) ainda é um ponto de partida incrivelmente valioso. Também é útil manter a documentação o mais próxima possível do código. Isso pode significar gerar um site estático a partir de arquivos de texto sem formatação ou de marcação e armazená-lo no mesmo repositório de código ou usando o wiki de repositório fornecido por um provedor de hospedagem de controle de origem.</p>
+			<p>One other important aspect of large project documentation is to use it as a means for capturing decision making whenever possible. As developers we are constantly making tradeoffs and decisions that may have impacts on the functionality or use of the codebase. When we capture these ideas, future developers are able to understand the thinking behind this decision. All too often, when decision making is not captured, developers will attempt to re-architect something until they hit the same wall. This “oh, I see why they did it that way” epiphany and wasted energy can be avoided when we accurately capture the thinking behind our decisions.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Quando os desenvolvedores são seus clientes</h2>
+			<p>Para algumas organizações, os desenvolvedores são nossos clientes. Podemos criar produtos que lidem com autenticação, mensagens, trabalhos de implantação, monitoramento de disponibilidade de sites, etc. Para esses tipos de produtos, a documentação precisa sempre ser tratada como um cidadão de primeira classe, pois é a maneira como nossos clientes aprendem sobre nosso produto.</p>
+			<p>O serviço de mensagens Twilio é um ótimo exemplo disso. Os documentos Twilio são exemplares, abrangendo uma ampla variedade de idiomas, fornecendo guias de início rápido e oferecendo tutoriais interativos e uma referência completa da API. A organização Twilio reconhece o valor desses documentos, empregando uma equipe de desenvolvedores para trabalhar em sua documentação e ferramentas associadas em tempo integral.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Resumindo</h2>
+			<p>Ao nos concentrarmos em escrever boa documentação, estamos mostrando empatia para os desenvolvedores que usam nosso projeto. Isso ajuda a criar um ambiente de projeto inclusivo, acolhedor e colaborativo.</p>
+		</div>
+
+		<div class="alert alert-primary" role="alert">
+  <h4 class="alert-heading">Leitura Adicional</h4>
+		
+		<ul>
+			<li>
+				<a href="http://www.writethedocs.org/guide/">Write the Docs Documentation Guide</a>
+			</li>
+			<li>
+				<a href="http://docslikecode.com/">Docs Like Code</a> by Anne Gentle
+			</li>
+			<li>
+				<a href="https://byrslf.co/writing-great-documentation-44d90367115a">"Writing Great Documentation"</a> by Taylor Singletary
+			</li>
+			<li>
+				<a href="https://github.com/PharkMillups/beautiful-docs">Beautiful Docs</a>
+			</li>
+		</ul>
+	</div>
+		<h1>Capítulo 5</h1>
+		<h2 id="tratar">Tratar outros desenvolvedores com respeito</h2>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<p>Este será o capítulo mais curto da série, mas é provavelmente o mais importante. É fundamental que tratemos nossos colegas com respeito. A principal maneira de fazer isso é trabalhar para criar um ambiente inclusivo e seguro para todos, independentemente de sexo, raça, orientação sexual, idade ou origem cultural. Seja on-line, no trabalho, em um encontro ou participando de uma conferência, seja gentil e respeitoso com as pessoas ao seu redor. Neste capítulo, abordaremos brevemente o viés inconsciente e criaremos ambientes inclusivos.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Viés inconsciente</h2>
+			<p>Na década de 1970, a orquestra típica era composta por mais de 90% de músicos do sexo masculino. Hoje, as orquestras são mais provavelmente compostas por um terço de músicos do sexo feminino, com a probabilidade de uma mulher ser selecionada aumentando em 30 a 60%. O que mudou para estimular esse aumento de músicos clássicos femininos? Foi a introdução de audições cegas. O processo de seleção de hoje tem audição de músicos sem ser visto pela comissão julgadora. No começo, isso provou ser necessário mais modificações à medida que as mulheres começaram a retirar seus sapatos, para que os juízes não ouvissem o som que os sapatos faziam quando o músico se aproximava da cadeira. Este é um exemplo de viés inconsciente. Os juízes em grande parte assumiram, presumivelmente sem intenção ou consciência de sua preferência, que os homens eram melhores músicos. Quando a chance para esse viés foi removida, mais mulheres foram selecionadas.</p>
+			<p>Os preconceitos inconscientes são estereótipos que mantemos sem estarmos explicitamente cientes deles. Eles são muitas vezes o resultado de julgamentos rápidos, que são "uma característica da evolução", de acordo com o professor de psicologia de Harvard, <a href="https://www.nytimes.com/2015/05/07/opinion/nicholas-kristof-our-biased-brains.html">Mahzarin Banaji</a>. Para os primeiros humanos, era útil categorizar rapidamente as coisas, como predadores ou possíveis ameaças. Hoje, mantemos essa habilidade e, embora em muitas situações da vida o viés sirva como um atalho para a tomada de decisões, ele também pode ter consequências negativas não intencionais, especialmente quando se aplica à maneira como pensamos sobre as outras pessoas.</p>
+			<p>O fato de que estes são vieses implícitos significa que estamos fazendo julgamentos que desconhecemos. Por causa disso, o primeiro passo é ganhar consciência dos preconceitos inconscientes que podemos conter. O Projeto Implícito de Harvard criou uma série de <a href="https://implicit.harvard.edu/implicit/takeatest.html">testes de associação implícita</a> , que permitem aos usuários realizar uma série de ações on-line que podem ajudar a revelar vieses ocultos.</p>
+			<p>Recentemente, o Google realizou um intenso esforço de treinamento de preconceito inconsciente com os funcionários e oferece os materiais de treinamento como parte de seu projeto <a href="https://rework.withgoogle.com/guides/unbiasing-raise-awareness/steps/introduction/">ReWork</a>. Esses materiais incluem informações em vídeo, links para estudos científicos e os materiais completos de treinamento usados pelo Google. Outras grandes empresas de tecnologia empreenderam esforços semelhantes, com a Microsoft oferecendo um módulo de <a href="https://www.microsoft.com/en-us/diversity/training">treinamento on-line</a> completo e o Facebook fornecendo uma série de módulos de <a href="https://managingbias.fb.com/">vídeo-aula</a>.</p>
+			<p>Ao nos tornarmos mais conscientes de como podemos ser influenciados por nossos vieses inconscientes, podemos melhorar a forma como colaboramos com nossos colegas e colegas.</p>
+			<p></p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Criando Ambientes de Acolhimento</h2>
+			<p>Assim como discutimos a criação de espaços inclusivos para projetos de código aberto, devemos procurar fazer o mesmo para espaços físicos. Os códigos de conduta também devem ser aplicados a eventos como grupos de encontro, hackathons e conferências. Se você trabalha para uma pequena empresa, certifique-se de que eles também tenham políticas claras de conduta. Aqui estão alguns recursos para códigos de conduta de eventos pessoais:</p>
+			<ul>
+				<li>Ada Intiative’s <a href="https://adainitiative.org/2014/02/18/howto-design-a-code-of-conduct-for-your-community/">“HOWTO Design a Code of Conduct for Your Community”</a>
+				</li>
+				<li>
+					<a href="https://hackcodeofconduct.org/">Hack Code of Conduct</a>
+				</li>
+				<li>
+					<a href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy">Geek Feminism’s conference anti-harassment policy</a>
+				</li>
+				<li>
+					<a href="http://citizencodeofconduct.org/">Citizen Code of Conduct</a>
+				</li>
+			</ul>
+			<p>A gerente de comunidade Sarah Jane Morris criou um <a href="">guia para hospedagem de eventos inclusivos</a>, que serve como um modelo útil para criar uma atmosfera positiva. Embora alguns dos recursos sejam específicos da área da baía, ele oferece um modelo sólido para a criação de uma cultura de eventos de boas-vindas. Se estivermos envolvidos na organização de um evento, também poderemos considerar alternativas para os happy hours ou locais alcoocêntricos típicos. Em seu artigo <a href="">“Álcool e Inclusão: planejando eventos técnicos com opções não-alcoólicas”</a>, a gerente da comunidade Kara Sowles sugere cinco dicas para incluir bebidas não alcoólicas em eventos:</p>
+			<ol>
+				<li>Fornecer igual número e qualidade de opções de bebidas alcoólicas e não alcoólicas.</li>
+				<li>Apresentar bebidas alcoólicas e não alcoólicas juntas no evento.</li>
+				<li>Anuncie bebidas alcoólicas e não alcoólicas igualmente antes do evento.</li>
+				<li>Se os coquetéis listados estiverem sendo servidos, liste um número igual de mocktails não alcoólicos.</li>
+				<li>Ter água livremente disponível, à vista e fácil de obter.</li>
+			</ol>
+			<p>Tomando estes tipos de considerações não se limita a eventos. Em um perfil da startup PayRange de Portland, Oregon, o CEO Paresh Patel discutiu a decisão da empresa de ler algumas das vantagens típicas do escritório de inicialização:</p>
+			<p>Nós não temos barris em nosso escritório, eles podem deixar algumas pessoas desconfortáveis. Nós não temos mesas de bilhar. Nós não temos happy hour de sexta-feira. Em vez disso, temos noites em família para jantar, microondas vegetarianas, piqueniques de verão onde os funcionários podem se divertir com seus filhos.</p>
+			<p>Estes são apenas alguns exemplos de como ambientes mais acolhedores são criados. Ao focar nas necessidades e no bem-estar de todos, somos capazes de construir comunidades mais fortes.</p>
+			<p></p>
+		</div>
+		<h2>Leitura Adicional</h2>
+		<p>Todos nós devemos fazer a nossa parte para criar uma cultura de trabalho inclusiva. Quer trabalhemos remotamente ou co-localizados, todos nós passamos muito tempo com colegas de trabalho. Para muitos de nós, o desenvolvimento da web se estende além de ser um trabalho diário em nossas vidas sociais e hobbies. Os guias e artigos abaixo são ferramentas incrivelmente úteis para construir ambientes positivos.</p>
+		<ul>
+			<li>
+				<a href="">Project Include</a>
+			</li>
+			<li>
+				<a href="">Hire More Women in Tech</a>
+			</li>
+			<li>
+				<a href="">Ally Skills Workshop</a>
+			</li>
+			<li>
+				<a href="">“How Diversity Makes Us Smarter”</a>by Katherine W. Phillips
+			</li>
+			<li>
+				<a href="">Model View Culture</a>
+			</li>
+		</ul>
+		<h1>Capítulo 6</h1>
+		<h2 id="conclusao">Conclusão</h2>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<p>Obrigado por dedicar um tempo para ler o Desenvolvimento da Web colaborativa. Espero que, ao ler este título, você veja o valor na criação de um ambiente de desenvolvedor inclusivo que se concentre na qualidade e aproveite a comunidade de código aberto. Isso engloba uma pequena parte do trabalho que podemos fazer como desenvolvedores da Web para garantir que a Web seja um espaço aberto e acessível para todos os usuários. Minha esperança é que agora você se sinta empoderado e empolgado para criar aplicativos dessa maneira.</p>
+			<p>Se ao longo de sua leitura você se deparar com coisas que estão faltando ou que poderiam ser melhoradas, eu o encorajaria a contribuir com o livro. Este título está disponível como código aberto em <a href="https://%20github.com/ascott1/ethical-web-dev/">https:// github.com/ascott1/ethical-web-dev/</a> . As contribuições podem ser feitas por:</p>
+			<ul>
+				<li>Contribuindo diretamente para o repositório do GitHub com um pull request</li>
+				<li>Criando um problema no repositório do GitHub do livro</li>
+				<li>Entrando em contato comigo por e-mail (adamdscott@proton‐mail.com) ou Twitter</li>
+			</ul>
+			<p>Vinte por cento dos lucros de cada título de Desenvolvimento Ético na Web serão doados a organizações cujo trabalho tenha um impacto positivo sobre as questões descritas. Para este título, vou doar para Mozilla e Girl Develop It. A Mozilla é uma organização sem fins lucrativos que fornece software, documentação e educação para a Web aberta. Girl Develop It oferece aulas e apoio da comunidade para mulheres de diversas origens que estão interessadas em aprender web e desenvolvimento de software.</p>
+			<p>Se você gostou desse título, espero que você se junte a mim para apoiar essas duas grandes organizações.</p>
+			<p>Este título é o quarto de uma série de relatórios digitais que estou escrevendo sobre o tema desenvolvimento ético da web. Os títulos futuros da série abordarão a criação de aplicativos da web que funcionam em todos os lugares, criando aplicativos da web que respeitem a privacidade e a segurança de um usuário e que trabalhem com colegas de desenvolvimento. Você pode aprender mais sobre a série em <a href="ethicalweb.org">ethicalweb.org</a> .</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Sobre o Autor</h2>
+			<p>Adam D. Scott é um desenvolvedor e educador baseado em Connecticut. Ele atualmente trabalha como líder de desenvolvimento no Consumer Financial Protection Bureau, onde lidera uma equipe de desenvolvedores de código aberto. Além disso, ele trabalhou na educação por mais de uma década, ensinando e escrevendo currículo em uma variedade de tópicos técnicos. O primeiro livro de Adam, o WordPress for Education (Packt), foi publicado em 2012. Seu curso de vídeo, Introdução ao Modern Front-End Development, foi publicado pela O'Reilly em 2015. Este é o quarto título de uma série sobre a ética da web. desenvolvimento publicado pela O'Reilly.</p>
+		</div>
+		<div class="shadow-sm p-3 mb-5 bg-white rounded">
+			<h2>Agradecimentos</h2>
+			<p>Meg Foley prestou apoio como editor deste relatório. Contribuições e sugestões também foram feitas ao site Ethical Web Development sobre os princípios fundamentais do desenvolvimento da Web ética. Essas contribuições são armazenadas em ethicalweb.org/humans.txt.</p>
+		</div><!-- Alerta Verde-->
+		<!-- <div class="alert alert-success" role="alert">
+  <h4 class="alert-heading"></h4>
+  <p></p>
+</div> -->
+		<!-- Página  -->
+		<!-- <div class="shadow-sm p-3 mb-5 bg-white rounded"></div> -->
+
+
+
+
+	</div>
+
+
+</body>
+</html
