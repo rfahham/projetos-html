@@ -1,0 +1,31 @@
+/*.featured {
+	background-color: #807aea;
+	background-image: url(../imagens/background.svg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: 50% auto; 
+	color: #fff;
+	padding: 6.5em 7% 5em 7%;
+
+}*/
+
+
+.featured {
+	background: #3b89da no-repeat url(../imagens/background.svg) right bottom;
+	background-size: 50% auto; 
+	color: #fff;
+	padding: 6.5em 7% 5em 7%;
+	} 
+
+.featured-heading {
+	font-size: 2.5em;
+	font-weight: bold;
+	max-width: 600px;
+	margin-bottom: 18px;
+
+}
+
+.featured-subheading {
+	font-size: 1.5em;
+
+}

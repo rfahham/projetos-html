@@ -1,0 +1,31 @@
+.container {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+body {
+    /* background-image: url(./imagens/background.jpg); */
+    background-size: 100%;
+    background: #252525;
+}
+
+
+h1, h2, h3, h4, h5,h6 {
+    text-align-last: center;
+    color: #0dc754;
+    font-family: verdana;
+  
+}
+
+p {
+    /* color: #faf8f8; */
+    color: #0dc754;
+    font-family: verdana;
+    text-align: justify;
+    font-size: 30px;
+}
+
+strong {
+        color: #fff;
+        /* color: #0dc754; */
+}
